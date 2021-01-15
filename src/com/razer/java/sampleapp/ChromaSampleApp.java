@@ -1,5 +1,7 @@
 package com.razer.java.sampleapp;
 
+import java.io.IOException;
+import java.util.Scanner;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -51,10 +53,15 @@ public class ChromaSampleApp extends ChromaEffects {
 		} else {
 			logError("******* Failed to initialize ChromaSDK! error="+result);
 			sChromaInitialized = false;
+			logMessage("Application quit!");
 			return;
 		}
 		
+		handleInput();
+		
 		uninit();
+		
+		logMessage("Application quit!");
 	}
 	
 	private static void uninit() {
@@ -78,6 +85,33 @@ public class ChromaSampleApp extends ChromaEffects {
 			}
 		};
 		timer.schedule(task, 100);
+	}
+	
+	private static void printLegend() {
+		logMessage("Press 'q' enter to quit\r\n");
+	}
+	
+	private static void handleInput() {
+		printLegend();
+		while (sWaitForExit) {
+			try {
+				int key =  System.in.read();
+				printLegend();
+				if (key == 113) { // q
+					return;
+				}
+			} catch (Exception e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+				return;
+			}
+	    
+			try {
+				Thread.sleep(100);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 
 }
