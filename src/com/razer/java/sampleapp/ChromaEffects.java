@@ -4290,9 +4290,8 @@ public class ChromaEffects {
     t += speed;
     float hp = (float) Math.abs(Math.cos(Math.PI / 2.0f + t));
     for (int i = 0; i < keys.length; ++i) {
-    int ratio = (i + 1) / keys.length;
     int color = sChromaAnimationAPI.getRGB(0, (int)(255 * (1 - hp)), 0);
-    if ((i + 1) / (keys.length + 1) < hp) {
+    if ((i + 1) / (float)((keys.length + 1)) < hp) {
     color = sChromaAnimationAPI.getRGB(0, 255, 0);
     } else {
     color = sChromaAnimationAPI.getRGB(0, 100, 0);
@@ -4413,9 +4412,8 @@ public class ChromaEffects {
     t += speed;
     float hp = (float) Math.abs(Math.cos(Math.PI / 2.0f + t));
     for (int i = 0; i < keys.length; ++i) {
-    int ratio = (i + 1) / keys.length;
     int color = sChromaAnimationAPI.getRGB((int)(255 * (1 - hp)), (int)(255 * (1 - hp)), 0);
-    if ((i + 1) / (keys.length + 1) < hp) {
+    if ((i + 1) / ((float)(keys.length + 1)) < hp) {
     color = sChromaAnimationAPI.getRGB(255, 255, 0);
     } else {
     color = sChromaAnimationAPI.getRGB(100, 100, 0);
