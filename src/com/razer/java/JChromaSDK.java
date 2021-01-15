@@ -21,9 +21,9 @@ public class JChromaSDK {
             libName += "64";
         }
         String cd = System.getProperty("user.dir");
-        System.out.println("********* JChromaSDK: cd="+cd);
+        //System.out.println("********* JChromaSDK: cd="+cd);
         String fullPath = cd + "\\libs\\" + libName;
-        System.out.println("********* JChromaSDK: fullPath="+fullPath);
+        //System.out.println("********* JChromaSDK: fullPath="+fullPath);
         wrapper = (JChromaLib)Native.loadLibrary(fullPath, JChromaLib.class);
     }
 

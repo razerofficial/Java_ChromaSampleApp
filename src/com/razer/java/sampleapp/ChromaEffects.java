@@ -6,9 +6,9 @@ public class ChromaEffects {
     protected static JChromaSDK sChromaAnimationAPI = null;
 
     protected static String getAnimationPath() {
-        String cd = System.getProperty("user.dir");
+    	String cd = System.getProperty("user.dir");
         //System.out.println("********* getAnimationPath: cd="+cd);
-        String path = cd + "\\mods\\MinecraftChromaMod\\Animations\\";
+        String path = cd + "\\Animations\\";
         //System.out.println("********* getAnimationPath: path="+path);
         return path;
     }

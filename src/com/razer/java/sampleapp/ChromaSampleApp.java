@@ -1,6 +1,5 @@
 package com.razer.java.sampleapp;
 
-import java.io.IOException;
 import java.util.Scanner;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -12,6 +11,7 @@ public class ChromaSampleApp extends ChromaEffects {
 	
 	private static boolean sWaitForExit = true;
 	private static boolean sChromaInitialized = false;
+	private static int sSelectedItem = 1;
 	
 	private static void logMessage(String msg) {
 		System.out.println(msg);
@@ -27,7 +27,6 @@ public class ChromaSampleApp extends ChromaEffects {
 		sChromaAnimationAPI = JChromaSDK.getInstance();
 		ChromaEffects.sChromaAnimationAPI = sChromaAnimationAPI;
 
-		logMessage("*****Constructing AppInfo...");
 		JAppInfoType appInfo = new JAppInfoType();
 
 	    appInfo.setTitle("Java Chroma Sample App");
@@ -45,13 +44,12 @@ public class ChromaSampleApp extends ChromaEffects {
 	    //    ;
 	    appInfo.supportedDevice = (0x01 | 0x02 | 0x04 | 0x08 | 0x10 | 0x20);
 	    appInfo.category = 2;
-	    logMessage("*****Initializing Chroma...");
 		int result = sChromaAnimationAPI.initSDK(appInfo);
 		if (result == 0) {
 			sChromaInitialized = true;
-			logMessage("*****Initialized ChromaSDK!");
+			logMessage("Initialized ChromaSDK!");
 		} else {
-			logError("******* Failed to initialize ChromaSDK! error="+result);
+			logError("Failed to initialize ChromaSDK! error="+result);
 			sChromaInitialized = false;
 			logMessage("Application quit!");
 			return;
@@ -87,23 +85,61 @@ public class ChromaSampleApp extends ChromaEffects {
 		timer.schedule(task, 100);
 	}
 	
+	private static void executeItem(int item) {
+		
+	}
+	
 	private static void printLegend() {
-		logMessage("Press 'q' enter to quit\r\n");
+		
+		
+		int MAX_ITEMS = 47;		
+		for (int index = 1; index <= MAX_ITEMS; ++index)
+        {
+            if (index == sSelectedItem)
+            {
+                System.out.print("[*] ");
+            }
+            else
+            {
+            	System.out.print("[ ] ");
+            }
+            System.out.print("Effect" + index);
+
+            if ((index % 4) == 0)
+            {
+            	System.out.println();
+            }
+            else
+            {
+            	System.out.print("\t\t");
+            }
+        }
+		System.out.println();
+		
+		logMessage("Enter the effect number and press `ENTER` to play the effect.");
+		logMessage("Just press `ENTER` to repeat the effect.");		
+		logMessage("Press `q` and press `ENTER` to quit\r\n");
 	}
 	
 	private static void handleInput() {
+		Scanner scanner = new Scanner(System.in);
+		
 		printLegend();
 		while (sWaitForExit) {
 			try {
-				int key =  System.in.read();
+				String input =  scanner.next();
 				printLegend();
-				if (key == 113) { // q
+				switch (input) {
+				case "Q":
+				case "q":
+					scanner.close();
 					return;
 				}
+				int item = Integer.parseInt(input);
+				executeItem(item);
 			} catch (Exception e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
-				return;
 			}
 	    
 			try {
