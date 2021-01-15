@@ -1,6 +1,8 @@
 package com.razer.java.sampleapp;
 
 import com.razer.java.JChromaSDK;
+import com.razer.java.JChromaSDK.Device;
+import com.razer.java.JChromaSDK.Device2D;
 
 public class ChromaEffects {
     protected static JChromaSDK sChromaAnimationAPI = null;
@@ -13,2245 +15,4570 @@ public class ChromaEffects {
         return path;
     }
     
-    public static void showEffectMainMenu()
-    {
-        String baseLayer = getAnimationPath()+"Rainbow_Keyboard.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, true);
-    }
-    public static void showEffectMainMenuChromaLink()
-    {
-        String baseLayer = getAnimationPath()+"Rainbow_ChromaLink.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, true);
-    }
-    public static void showEffectMainMenuHeadset()
-    {
-        String baseLayer = getAnimationPath()+"Rainbow_Headset.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, true);
-    }
-    public static void showEffectMainMenuMousepad()
-    {
-        String baseLayer = getAnimationPath()+"Rainbow_Mousepad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, true);
-    }
-    public static void showEffectMainMenuMouse()
-    {
-        String baseLayer = getAnimationPath()+"Rainbow_Mouse.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, true);
-    }
-    public static void showEffectMainMenuKeypad()
-    {
-        String baseLayer = getAnimationPath()+"Rainbow_Keypad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, true);
-    }
-
     public static void showEffect1()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int ground = sChromaAnimationAPI.getRGB(150, 100, 60);
-        sChromaAnimationAPI.fillZeroColorAllFramesName(baseLayer, ground);
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Sprite1_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect1ChromaLink()
     {
-        String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_ChromaLink.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int color1 = sChromaAnimationAPI.getRGB(150, 100, 60);
-        int color2 = sChromaAnimationAPI.getRGB(0, 0, 0);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Sprite1_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect1Headset()
     {
-        String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Headset.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int color1 = sChromaAnimationAPI.getRGB(150, 100, 60);
-        int color2 = sChromaAnimationAPI.getRGB(0, 0, 0);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Sprite1_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect1Mousepad()
     {
-        String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Mousepad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int color1 = sChromaAnimationAPI.getRGB(150, 100, 60);
-        int color2 = sChromaAnimationAPI.getRGB(0, 0, 0);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Sprite1_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect1Mouse()
     {
-        String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Mouse.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int color1 = sChromaAnimationAPI.getRGB(150, 100, 60);
-        int color2 = sChromaAnimationAPI.getRGB(0, 0, 0);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Sprite1_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect1Keypad()
     {
-        String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Keypad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int color1 = sChromaAnimationAPI.getRGB(150, 100, 60);
-        int color2 = sChromaAnimationAPI.getRGB(0, 0, 0);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Sprite1_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect2()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
-        String layer2 = getAnimationPath()+"Block4_Keyboard.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.closeAnimationName(layer2);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        sChromaAnimationAPI.getAnimation(layer2);
-        int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
-        sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.1f, 0);
-        sChromaAnimationAPI.copyNonZeroAllKeysAllFramesName(layer2, baseLayer);
-        sChromaAnimationAPI.reverseAllFramesName(layer2);
-        sChromaAnimationAPI.addNonZeroAllKeysAllFramesName(layer2, baseLayer);
-        sChromaAnimationAPI.trimEndFramesName(baseLayer, 9);
-        sChromaAnimationAPI.insertDelayName(baseLayer, 8, 10);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, 5);
-        int color1 = sChromaAnimationAPI.getRGB(60, 40, 20);
-        int color2 = sChromaAnimationAPI.getRGB(170, 102, 15);
-        sChromaAnimationAPI.multiplyNonZeroTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.fillZeroColorAllFramesRGBName(baseLayer, 0, 48, 0);
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Trails_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect2ChromaLink()
     {
-        String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_ChromaLink.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int color1 = sChromaAnimationAPI.getRGB(60, 40, 20);
-        int color2 = sChromaAnimationAPI.getRGB(170, 102, 15);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Trails_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect2Headset()
     {
-        String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Headset.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int color1 = sChromaAnimationAPI.getRGB(60, 40, 20);
-        int color2 = sChromaAnimationAPI.getRGB(170, 102, 15);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Trails_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect2Mousepad()
     {
-        String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Mousepad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int color1 = sChromaAnimationAPI.getRGB(60, 40, 20);
-        int color2 = sChromaAnimationAPI.getRGB(170, 102, 15);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Trails_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect2Mouse()
     {
-        String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Mouse.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int color1 = sChromaAnimationAPI.getRGB(60, 40, 20);
-        int color2 = sChromaAnimationAPI.getRGB(170, 102, 15);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Trails_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect2Keypad()
     {
-        String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Keypad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int color1 = sChromaAnimationAPI.getRGB(60, 40, 20);
-        int color2 = sChromaAnimationAPI.getRGB(170, 102, 15);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Trails_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect3()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
-        String layer2 = getAnimationPath()+"Sword1_Keyboard.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.closeAnimationName(layer2);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        sChromaAnimationAPI.getAnimation(layer2);
-        sChromaAnimationAPI.reduceFramesName(layer2, 2);
-        sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(layer2, 200, 170, 136);
-        sChromaAnimationAPI.fillThresholdColorsAllFramesRGBName(layer2, 100, 255, 255, 255);
-        int frameId = 17;
-        sChromaAnimationAPI.trimEndFramesName(layer2, frameId);
-        int delay = 2;
-        sChromaAnimationAPI.insertDelayName(layer2, frameId, delay);
-        sChromaAnimationAPI.duplicateMirrorFramesName(layer2);
-        int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
-        sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.1f, 0);
-        sChromaAnimationAPI.fillZeroColorAllFramesRGBName(baseLayer, 64, 32, 0); //background
-        sChromaAnimationAPI.copyNonZeroAllKeysAllFramesOffsetName(layer2, baseLayer, 0);
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Trails_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // set middle color green
+    sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(baseLayer, 0, 255, 0);
+    int minThreshold = 50; //set outer color to red
+    int maxThreshold = 150; //set main color to blue
+    sChromaAnimationAPI.fillThresholdColorsMinMaxAllFramesRGBName(baseLayer, minThreshold, 255, 0, 0, maxThreshold, 0, 0, 255);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect3ChromaLink()
     {
-        String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_ChromaLink.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int color1 = sChromaAnimationAPI.getRGB(255, 255, 245);
-        int color2 = sChromaAnimationAPI.getRGB(127, 127, 127);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Trails_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // set middle color green
+    sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(baseLayer, 0, 255, 0);
+    int minThreshold = 50; //set outer color to red
+    int maxThreshold = 150; //set main color to blue
+    sChromaAnimationAPI.fillThresholdColorsMinMaxAllFramesRGBName(baseLayer, minThreshold, 255, 0, 0, maxThreshold, 0, 0, 255);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect3Headset()
     {
-        String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Headset.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int color1 = sChromaAnimationAPI.getRGB(255, 255, 245);
-        int color2 = sChromaAnimationAPI.getRGB(127, 127, 127);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Trails_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // set middle color green
+    sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(baseLayer, 0, 255, 0);
+    int minThreshold = 50; //set outer color to red
+    int maxThreshold = 150; //set main color to blue
+    sChromaAnimationAPI.fillThresholdColorsMinMaxAllFramesRGBName(baseLayer, minThreshold, 255, 0, 0, maxThreshold, 0, 0, 255);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect3Mousepad()
     {
-        String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Mousepad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int color1 = sChromaAnimationAPI.getRGB(255, 255, 245);
-        int color2 = sChromaAnimationAPI.getRGB(127, 127, 127);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Trails_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // set middle color green
+    sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(baseLayer, 0, 255, 0);
+    int minThreshold = 50; //set outer color to red
+    int maxThreshold = 150; //set main color to blue
+    sChromaAnimationAPI.fillThresholdColorsMinMaxAllFramesRGBName(baseLayer, minThreshold, 255, 0, 0, maxThreshold, 0, 0, 255);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect3Mouse()
     {
-        String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Mouse.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int color1 = sChromaAnimationAPI.getRGB(255, 255, 245);
-        int color2 = sChromaAnimationAPI.getRGB(127, 127, 127);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Trails_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // set middle color green
+    sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(baseLayer, 0, 255, 0);
+    int minThreshold = 50; //set outer color to red
+    int maxThreshold = 150; //set main color to blue
+    sChromaAnimationAPI.fillThresholdColorsMinMaxAllFramesRGBName(baseLayer, minThreshold, 255, 0, 0, maxThreshold, 0, 0, 255);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect3Keypad()
     {
-        String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Keypad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int color1 = sChromaAnimationAPI.getRGB(255, 255, 245);
-        int color2 = sChromaAnimationAPI.getRGB(127, 127, 127);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // static color
+    sChromaAnimationAPI.fillZeroColorAllFramesRGBName(baseLayer, 255, 0, 0);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect4()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
-        String layer2 = getAnimationPath()+"Block3_Keyboard.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.closeAnimationName(layer2);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        sChromaAnimationAPI.getAnimation(layer2);
-        sChromaAnimationAPI.insertDelayName(layer2, 8, 10);
-        sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(layer2, 284, 206, 144);
-        int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
-        sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.1f, 0);
-        sChromaAnimationAPI.fillZeroColorAllFramesRGBName(baseLayer, 64, 32, 0);
-        sChromaAnimationAPI.copyNonZeroAllKeysAllFramesOffsetName(layer2, baseLayer, 0);
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/ParticlesOut_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect4ChromaLink()
     {
-        String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_ChromaLink.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        sChromaAnimationAPI.reverseAllFramesName(baseLayer);
-        int color1 = sChromaAnimationAPI.getRGB(255, 0, 0);
-        int color2 = sChromaAnimationAPI.getRGB(0, 45, 45);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/ParticlesOut_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect4Headset()
     {
-        String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Headset.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        sChromaAnimationAPI.reverseAllFramesName(baseLayer);
-        int color1 = sChromaAnimationAPI.getRGB(255, 0, 0);
-        int color2 = sChromaAnimationAPI.getRGB(0, 45, 45);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/ParticlesOut_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect4Mousepad()
     {
-        String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Mousepad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        sChromaAnimationAPI.reverseAllFramesName(baseLayer);
-        int color1 = sChromaAnimationAPI.getRGB(255, 0, 0);
-        int color2 = sChromaAnimationAPI.getRGB(0, 45, 45);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/ParticlesOut_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect4Mouse()
     {
-        String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Mouse.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        sChromaAnimationAPI.reverseAllFramesName(baseLayer);
-        int color1 = sChromaAnimationAPI.getRGB(255, 0, 0);
-        int color2 = sChromaAnimationAPI.getRGB(0, 45, 45);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/ParticlesOut_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect4Keypad()
     {
-        String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Keypad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        sChromaAnimationAPI.reverseAllFramesName(baseLayer);
-        int color1 = sChromaAnimationAPI.getRGB(255, 0, 0);
-        int color2 = sChromaAnimationAPI.getRGB(0, 45, 45);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/ParticlesOut_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect5()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
-        String layer2 = getAnimationPath()+"Bow1_Keyboard.chroma";
-        String layer3 = getAnimationPath()+"Fireball1_Keyboard.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.closeAnimationName(layer2);
-        sChromaAnimationAPI.closeAnimationName(layer3);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        sChromaAnimationAPI.getAnimation(layer2);
-        sChromaAnimationAPI.getAnimation(layer3);
-        sChromaAnimationAPI.insertDelayName(layer3, 7, 10);
-        int frameCount = sChromaAnimationAPI.getFrameCountName(layer3);
-        sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.1f, 0);
-        sChromaAnimationAPI.duplicateFirstFrameName(layer2, frameCount);
-        sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(layer2, 140, 120, 200);
-        sChromaAnimationAPI.fillThresholdColorsAllFramesRGBName(layer2, 100, 130, 47, 99);
-        sChromaAnimationAPI.copyNonZeroAllKeysAllFramesOffsetName(layer2, baseLayer, 0); //bow
-        sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(layer3, 160, 120, 90);
-        sChromaAnimationAPI.fillThresholdColorsAllFramesName(layer3, 50, 0);
-        sChromaAnimationAPI.copyNonZeroAllKeysAllFramesOffsetName(layer3, baseLayer, 0); //arrow
-        sChromaAnimationAPI.fillZeroColorAllFramesRGBName(baseLayer, 64, 32, 0); //background
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/ParticlesOut_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // turn grayscale particles to blue water
+    sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(baseLayer, 0, 127, 255);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect5ChromaLink()
     {
-        String baseLayer = getAnimationPath()+"Blank_ChromaLink.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(34, 102, 34);
-        int color2 = sChromaAnimationAPI.getRGB(153, 105, 46);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/ParticlesOut_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // turn grayscale particles to blue water
+    sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(baseLayer, 0, 127, 255);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect5Headset()
     {
-        String baseLayer = getAnimationPath()+"Blank_Headset.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(34, 102, 34);
-        int color2 = sChromaAnimationAPI.getRGB(153, 105, 46);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/ParticlesOut_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // turn grayscale particles to blue water
+    sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(baseLayer, 0, 127, 255);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect5Mousepad()
     {
-        String baseLayer = getAnimationPath()+"Blank_Mousepad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(34, 102, 34);
-        int color2 = sChromaAnimationAPI.getRGB(153, 105, 46);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/ParticlesOut_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // turn grayscale particles to blue water
+    sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(baseLayer, 0, 127, 255);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect5Mouse()
     {
-        String baseLayer = getAnimationPath()+"Blank_Mouse.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(34, 102, 34);
-        int color2 = sChromaAnimationAPI.getRGB(153, 105, 46);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/ParticlesOut_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // turn grayscale particles to blue water
+    sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(baseLayer, 0, 127, 255);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect5Keypad()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keypad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(34, 102, 34);
-        int color2 = sChromaAnimationAPI.getRGB(153, 105, 46);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/ParticlesOut_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // turn grayscale particles to blue water
+    sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(baseLayer, 0, 127, 255);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect6()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
-        String layer2 = getAnimationPath()+"Train1_Keyboard.chroma";
-        String layer3 = getAnimationPath()+"Train2_Keyboard.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.closeAnimationName(layer2);
-        sChromaAnimationAPI.closeAnimationName(layer3);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        sChromaAnimationAPI.getAnimation(layer2);
-        sChromaAnimationAPI.getAnimation(layer3);
-        int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
-        sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.1f, 0);
-        sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(layer2, 162, 129, 81);
-        sChromaAnimationAPI.copyNonZeroAllKeysAllFramesOffsetName(layer2, baseLayer, 0);
-        sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(layer3, 127, 0, 0);
-        sChromaAnimationAPI.addNonZeroAllKeysAllFramesOffsetName(layer3, baseLayer, 7);
-        sChromaAnimationAPI.fillZeroColorAllFramesRGBName(baseLayer, 60, 40, 20); //background
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 50;
+    // set all frames to white, with all frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
+    // fade the start of the animation starting at frame zero to 40
+    sChromaAnimationAPI.fadeStartFramesName(baseLayer, 40);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect6ChromaLink()
     {
-        String baseLayer = getAnimationPath()+"Blank_ChromaLink.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(54, 54, 5);
-        int color2 = sChromaAnimationAPI.getRGB(255, 69, 0);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 50;
+    // set all frames to white, with all frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
+    // fade the start of the animation starting at frame zero to 40
+    sChromaAnimationAPI.fadeStartFramesName(baseLayer, 40);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect6Headset()
     {
-        String baseLayer = getAnimationPath()+"Blank_Headset.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(54, 54, 5);
-        int color2 = sChromaAnimationAPI.getRGB(255, 69, 0);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 50;
+    // set all frames to white, with all frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
+    // fade the start of the animation starting at frame zero to 40
+    sChromaAnimationAPI.fadeStartFramesName(baseLayer, 40);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect6Mousepad()
     {
-        String baseLayer = getAnimationPath()+"Blank_Mousepad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(54, 54, 5);
-        int color2 = sChromaAnimationAPI.getRGB(255, 69, 0);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 50;
+    // set all frames to white, with all frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
+    // fade the start of the animation starting at frame zero to 40
+    sChromaAnimationAPI.fadeStartFramesName(baseLayer, 40);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect6Mouse()
     {
-        String baseLayer = getAnimationPath()+"Blank_Mouse.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(54, 54, 5);
-        int color2 = sChromaAnimationAPI.getRGB(255, 69, 0);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 50;
+    // set all frames to white, with all frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
+    // fade the start of the animation starting at frame zero to 40
+    sChromaAnimationAPI.fadeStartFramesName(baseLayer, 40);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect6Keypad()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keypad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(54, 54, 5);
-        int color2 = sChromaAnimationAPI.getRGB(255, 69, 0);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 50;
+    // set all frames to white, with all frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
+    // fade the start of the animation starting at frame zero to 40
+    sChromaAnimationAPI.fadeStartFramesName(baseLayer, 40);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect7()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
-        String layer2 = getAnimationPath()+"Block3_Keyboard.chroma";
-        String layer3 = getAnimationPath()+"Reticle1_Keyboard.chroma";
-        String layer4 = getAnimationPath()+"Reticle2_Keyboard.chroma";
-        String layer5 = getAnimationPath()+"Reticle3_Keyboard.chroma";
-        String layer6 = getAnimationPath()+"Reticle4_Keyboard.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.closeAnimationName(layer2);
-        sChromaAnimationAPI.closeAnimationName(layer3);
-        sChromaAnimationAPI.closeAnimationName(layer4);
-        sChromaAnimationAPI.closeAnimationName(layer5);
-        sChromaAnimationAPI.closeAnimationName(layer6);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        sChromaAnimationAPI.getAnimation(layer2);
-        sChromaAnimationAPI.getAnimation(layer3);
-        sChromaAnimationAPI.getAnimation(layer4);
-        sChromaAnimationAPI.getAnimation(layer5);
-        sChromaAnimationAPI.getAnimation(layer6);
-        int frameId = 8;
-        int delay = 30;
-        sChromaAnimationAPI.insertDelayName(layer2, frameId, delay);
-        sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(layer2, 284, 206, 144);
-        int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
-        sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.1f, 0);
-        sChromaAnimationAPI.fillZeroColorAllFramesRGBName(baseLayer, 64, 32, 0);
-        sChromaAnimationAPI.copyNonZeroAllKeysAllFramesOffsetName(layer2, baseLayer, 0);
-        sChromaAnimationAPI.copyNonZeroAllKeysAllFramesOffsetName(layer3, baseLayer, 0);
-        sChromaAnimationAPI.copyNonZeroAllKeysAllFramesOffsetName(layer4, baseLayer, 0);
-        sChromaAnimationAPI.copyNonZeroAllKeysAllFramesOffsetName(layer5, baseLayer, 0);
-        sChromaAnimationAPI.copyNonZeroAllKeysAllFramesOffsetName(layer6, baseLayer, 0);
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 50;
+    // set all frames to white, with all frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
+    // fade the end of the animation starting at frame length - 40 (60)
+    sChromaAnimationAPI.fadeEndFramesName(baseLayer, 40);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect7ChromaLink()
     {
-        String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_ChromaLink.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int color1 = sChromaAnimationAPI.getRGB(0, 45, 45);
-        int color2 = sChromaAnimationAPI.getRGB(249, 194, 126);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 50;
+    // set all frames to white, with all frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
+    // fade the end of the animation starting at frame length - 40 (60)
+    sChromaAnimationAPI.fadeEndFramesName(baseLayer, 40);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect7Headset()
     {
-        String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Headset.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int color1 = sChromaAnimationAPI.getRGB(0, 45, 45);
-        int color2 = sChromaAnimationAPI.getRGB(249, 194, 126);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 50;
+    // set all frames to white, with all frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
+    // fade the end of the animation starting at frame length - 40 (60)
+    sChromaAnimationAPI.fadeEndFramesName(baseLayer, 40);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect7Mousepad()
     {
-        String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Mousepad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int color1 = sChromaAnimationAPI.getRGB(0, 45, 45);
-        int color2 = sChromaAnimationAPI.getRGB(249, 194, 126);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 50;
+    // set all frames to white, with all frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
+    // fade the end of the animation starting at frame length - 40 (60)
+    sChromaAnimationAPI.fadeEndFramesName(baseLayer, 40);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect7Mouse()
     {
-        String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Mouse.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int color1 = sChromaAnimationAPI.getRGB(0, 45, 45);
-        int color2 = sChromaAnimationAPI.getRGB(249, 194, 126);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 50;
+    // set all frames to white, with all frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
+    // fade the end of the animation starting at frame length - 40 (60)
+    sChromaAnimationAPI.fadeEndFramesName(baseLayer, 40);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect7Keypad()
     {
-        String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Keypad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int color1 = sChromaAnimationAPI.getRGB(0, 45, 45);
-        int color2 = sChromaAnimationAPI.getRGB(249, 194, 126);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 50;
+    // set all frames to white, with all frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
+    // fade the end of the animation starting at frame length - 40 (60)
+    sChromaAnimationAPI.fadeEndFramesName(baseLayer, 40);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect8()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
-        String layer2 = getAnimationPath()+"Block3_Keyboard.chroma";
-        String layer3 = getAnimationPath()+"UpParticle1_Keyboard.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.closeAnimationName(layer2);
-        sChromaAnimationAPI.closeAnimationName(layer3);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        sChromaAnimationAPI.getAnimation(layer2);
-        sChromaAnimationAPI.getAnimation(layer3);
-        int frameId = 8;
-        int delay = 30;
-        sChromaAnimationAPI.insertDelayName(layer2, frameId, delay);
-        sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(layer2, 284, 206, 144);
-        int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
-        sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.1f, 0);
-        sChromaAnimationAPI.fillZeroColorAllFramesRGBName(baseLayer, 60, 40, 20);
-        sChromaAnimationAPI.copyNonZeroAllKeysAllFramesOffsetName(layer2, baseLayer, 0);
-        sChromaAnimationAPI.trimEndFramesName(layer3, 25);
-        sChromaAnimationAPI.copyNonZeroAllKeysAllFramesOffsetName(layer3, baseLayer, 16);
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 50;
+    // set all frames to white, with all frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
+    // fade the start of the animation starting at frame zero to 40
+    sChromaAnimationAPI.fadeStartFramesName(baseLayer, 40);
+    // fade the end of the animation starting at frame length - 40 (60)
+    sChromaAnimationAPI.fadeEndFramesName(baseLayer, 40);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect8ChromaLink()
     {
-        String baseLayer = getAnimationPath()+"Blank_ChromaLink.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 8;
-        sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.1f, 0);
-        sChromaAnimationAPI.fillRandomColorsBlackAndWhiteAllFramesName(baseLayer);
-        sChromaAnimationAPI.duplicateFramesName(baseLayer);
-        sChromaAnimationAPI.duplicateFramesName(baseLayer);
-        int color1 = sChromaAnimationAPI.getRGB(255, 0, 0);
-        int color2 = sChromaAnimationAPI.getRGB(64, 0, 0);
-        sChromaAnimationAPI.multiplyNonZeroTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 50;
+    // set all frames to white, with all frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
+    // fade the start of the animation starting at frame zero to 40
+    sChromaAnimationAPI.fadeStartFramesName(baseLayer, 40);
+    // fade the end of the animation starting at frame length - 40 (60)
+    sChromaAnimationAPI.fadeEndFramesName(baseLayer, 40);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect8Headset()
     {
-        String baseLayer = getAnimationPath()+"Blank_Headset.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 8;
-        sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.1f, 0);
-        sChromaAnimationAPI.fillRandomColorsBlackAndWhiteAllFramesName(baseLayer);
-        sChromaAnimationAPI.duplicateFramesName(baseLayer);
-        sChromaAnimationAPI.duplicateFramesName(baseLayer);
-        int color1 = sChromaAnimationAPI.getRGB(255, 0, 0);
-        int color2 = sChromaAnimationAPI.getRGB(64, 0, 0);
-        sChromaAnimationAPI.multiplyNonZeroTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 50;
+    // set all frames to white, with all frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
+    // fade the start of the animation starting at frame zero to 40
+    sChromaAnimationAPI.fadeStartFramesName(baseLayer, 40);
+    // fade the end of the animation starting at frame length - 40 (60)
+    sChromaAnimationAPI.fadeEndFramesName(baseLayer, 40);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect8Mousepad()
     {
-        String baseLayer = getAnimationPath()+"Blank_Mousepad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 8;
-        sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.1f, 0);
-        sChromaAnimationAPI.fillRandomColorsBlackAndWhiteAllFramesName(baseLayer);
-        sChromaAnimationAPI.duplicateFramesName(baseLayer);
-        sChromaAnimationAPI.duplicateFramesName(baseLayer);
-        int color1 = sChromaAnimationAPI.getRGB(255, 0, 0);
-        int color2 = sChromaAnimationAPI.getRGB(64, 0, 0);
-        sChromaAnimationAPI.multiplyNonZeroTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 50;
+    // set all frames to white, with all frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
+    // fade the start of the animation starting at frame zero to 40
+    sChromaAnimationAPI.fadeStartFramesName(baseLayer, 40);
+    // fade the end of the animation starting at frame length - 40 (60)
+    sChromaAnimationAPI.fadeEndFramesName(baseLayer, 40);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect8Mouse()
     {
-        String baseLayer = getAnimationPath()+"Blank_Mouse.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 8;
-        sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.1f, 0);
-        sChromaAnimationAPI.fillRandomColorsBlackAndWhiteAllFramesName(baseLayer);
-        sChromaAnimationAPI.duplicateFramesName(baseLayer);
-        sChromaAnimationAPI.duplicateFramesName(baseLayer);
-        int color1 = sChromaAnimationAPI.getRGB(255, 0, 0);
-        int color2 = sChromaAnimationAPI.getRGB(64, 0, 0);
-        sChromaAnimationAPI.multiplyNonZeroTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 50;
+    // set all frames to white, with all frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
+    // fade the start of the animation starting at frame zero to 40
+    sChromaAnimationAPI.fadeStartFramesName(baseLayer, 40);
+    // fade the end of the animation starting at frame length - 40 (60)
+    sChromaAnimationAPI.fadeEndFramesName(baseLayer, 40);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect8Keypad()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keypad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 8;
-        sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.1f, 0);
-        sChromaAnimationAPI.fillRandomColorsBlackAndWhiteAllFramesName(baseLayer);
-        sChromaAnimationAPI.duplicateFramesName(baseLayer);
-        sChromaAnimationAPI.duplicateFramesName(baseLayer);
-        int color1 = sChromaAnimationAPI.getRGB(255, 0, 0);
-        int color2 = sChromaAnimationAPI.getRGB(64, 0, 0);
-        sChromaAnimationAPI.multiplyNonZeroTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 50;
+    // set all frames to white, with all frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
+    // fade the start of the animation starting at frame zero to 40
+    sChromaAnimationAPI.fadeStartFramesName(baseLayer, 40);
+    // fade the end of the animation starting at frame length - 40 (60)
+    sChromaAnimationAPI.fadeEndFramesName(baseLayer, 40);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect9()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
-        String layer2 = getAnimationPath()+"Ladder1_Keyboard.chroma";
-        String layer3 = getAnimationPath()+"Ladder2_Keyboard.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.closeAnimationName(layer2);
-        sChromaAnimationAPI.closeAnimationName(layer3);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        sChromaAnimationAPI.getAnimation(layer2);
-        sChromaAnimationAPI.getAnimation(layer3);
-        int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
-        sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.1f, 0);
-        sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(layer2, 162, 129, 81);
-        sChromaAnimationAPI.copyNonZeroAllKeysAllFramesOffsetName(layer2, baseLayer, 0);
-        sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(layer3, 127, 0, 0);
-        sChromaAnimationAPI.addNonZeroAllKeysAllFramesOffsetName(layer3, baseLayer, 12);
-        sChromaAnimationAPI.fillZeroColorAllFramesRGBName(baseLayer, 60, 40, 20); //background
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 50;
+    // set all frames to white, with all frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
+    //integer number of times to blink during animation
+    float speed = 2;
+    // loop over all frames in the layer
+    for (int frameId = 0; frameId < frameCount; ++frameId) {
+    //Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
+    float t = (float) (1 - Math.abs(Math.cos(speed * Math.PI * (frameId + 1) / (float)frameCount)));
+    // multiply the frame by the 't' intensity
+    sChromaAnimationAPI.multiplyIntensityName(baseLayer, frameId, t);
+    }
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect9ChromaLink()
     {
-        String baseLayer = getAnimationPath()+"Blank_ChromaLink.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(255, 105, 20);
-        int color2 = sChromaAnimationAPI.getRGB(255, 255, 0);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 50;
+    // set all frames to white, with all frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
+    //integer number of times to blink during animation
+    float speed = 2;
+    // loop over all frames in the layer
+    for (int frameId = 0; frameId < frameCount; ++frameId) {
+    //Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
+    float t = (float) (1 - Math.abs(Math.cos(speed * Math.PI * (frameId + 1) / (float)frameCount)));
+    // multiply the frame by the 't' intensity
+    sChromaAnimationAPI.multiplyIntensityName(baseLayer, frameId, t);
+    }
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect9Headset()
     {
-        String baseLayer = getAnimationPath()+"Blank_Headset.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(255, 105, 20);
-        int color2 = sChromaAnimationAPI.getRGB(255, 255, 0);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 50;
+    // set all frames to white, with all frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
+    //integer number of times to blink during animation
+    float speed = 2;
+    // loop over all frames in the layer
+    for (int frameId = 0; frameId < frameCount; ++frameId) {
+    //Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
+    float t = (float) (1 - Math.abs(Math.cos(speed * Math.PI * (frameId + 1) / (float)frameCount)));
+    // multiply the frame by the 't' intensity
+    sChromaAnimationAPI.multiplyIntensityName(baseLayer, frameId, t);
+    }
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect9Mousepad()
     {
-        String baseLayer = getAnimationPath()+"Blank_Mousepad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(255, 105, 20);
-        int color2 = sChromaAnimationAPI.getRGB(255, 255, 0);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 50;
+    // set all frames to white, with all frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
+    //integer number of times to blink during animation
+    float speed = 2;
+    // loop over all frames in the layer
+    for (int frameId = 0; frameId < frameCount; ++frameId) {
+    //Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
+    float t = (float) (1 - Math.abs(Math.cos(speed * Math.PI * (frameId + 1) / (float)frameCount)));
+    // multiply the frame by the 't' intensity
+    sChromaAnimationAPI.multiplyIntensityName(baseLayer, frameId, t);
+    }
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect9Mouse()
     {
-        String baseLayer = getAnimationPath()+"Blank_Mouse.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(255, 105, 20);
-        int color2 = sChromaAnimationAPI.getRGB(255, 255, 0);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 50;
+    // set all frames to white, with all frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
+    //integer number of times to blink during animation
+    float speed = 2;
+    // loop over all frames in the layer
+    for (int frameId = 0; frameId < frameCount; ++frameId) {
+    //Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
+    float t = (float) (1 - Math.abs(Math.cos(speed * Math.PI * (frameId + 1) / (float)frameCount)));
+    // multiply the frame by the 't' intensity
+    sChromaAnimationAPI.multiplyIntensityName(baseLayer, frameId, t);
+    }
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect9Keypad()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keypad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(255, 105, 20);
-        int color2 = sChromaAnimationAPI.getRGB(255, 255, 0);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 50;
+    // set all frames to white, with all frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
+    //integer number of times to blink during animation
+    float speed = 2;
+    // loop over all frames in the layer
+    for (int frameId = 0; frameId < frameCount; ++frameId) {
+    //Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
+    float t = (float) (1 - Math.abs(Math.cos(speed * Math.PI * (frameId + 1) / (float)frameCount)));
+    // multiply the frame by the 't' intensity
+    sChromaAnimationAPI.multiplyIntensityName(baseLayer, frameId, t);
+    }
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect10()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
-        String layer2 = getAnimationPath()+"Heart1_Keyboard.chroma";
-        String layer3 = getAnimationPath()+"ReactiveSpace_Keyboard.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.closeAnimationName(layer2);
-        sChromaAnimationAPI.closeAnimationName(layer3);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        sChromaAnimationAPI.getAnimation(layer2);
-        sChromaAnimationAPI.getAnimation(layer3);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.1f, 0);
-        sChromaAnimationAPI.duplicateFirstFrameName(layer2, 20);
-        sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(layer2, 0, 255, 0);
-        sChromaAnimationAPI.copyNonZeroAllKeysAllFramesOffsetName(layer2, baseLayer, 5);
-        sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(layer3, 255, 64, 64);
-        sChromaAnimationAPI.copyNonZeroAllKeysAllFramesOffsetName(layer3, baseLayer, 10);
-        sChromaAnimationAPI.fillZeroColorAllFramesRGBName(baseLayer, 60, 40, 20); //background
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Particles2_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect10ChromaLink()
     {
-        String baseLayer = getAnimationPath()+"Blank_ChromaLink.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(124, 164, 124);
-        int color2 = sChromaAnimationAPI.getRGB(215, 215, 215);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Particles2_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect10Headset()
     {
-        String baseLayer = getAnimationPath()+"Blank_Headset.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(124, 164, 124);
-        int color2 = sChromaAnimationAPI.getRGB(215, 215, 215);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Particles2_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect10Mousepad()
     {
-        String baseLayer = getAnimationPath()+"Blank_Mousepad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(124, 164, 124);
-        int color2 = sChromaAnimationAPI.getRGB(215, 215, 215);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Particles2_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect10Mouse()
     {
-        String baseLayer = getAnimationPath()+"Blank_Mouse.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(124, 164, 124);
-        int color2 = sChromaAnimationAPI.getRGB(215, 215, 215);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Particles2_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect10Keypad()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keypad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(124, 164, 124);
-        int color2 = sChromaAnimationAPI.getRGB(215, 215, 215);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Particles2_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect11()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
-        String layer2 = getAnimationPath()+"Ladder1_Keyboard.chroma";
-        String layer3 = getAnimationPath()+"Ladder2_Keyboard.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.closeAnimationName(layer2);
-        sChromaAnimationAPI.closeAnimationName(layer3);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        sChromaAnimationAPI.getAnimation(layer2);
-        sChromaAnimationAPI.getAnimation(layer3);
-        sChromaAnimationAPI.duplicateFramesName(layer2);
-        sChromaAnimationAPI.duplicateFramesName(layer2);
-        int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
-        sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.1f, 0);
-        sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(layer2, 20, 40, 255);
-        sChromaAnimationAPI.copyNonZeroAllKeysAllFramesOffsetName(layer2, baseLayer, 0);
-        sChromaAnimationAPI.addNonZeroAllKeysAllFramesOffsetName(layer2, baseLayer, 20);
-        sChromaAnimationAPI.addNonZeroAllKeysAllFramesOffsetName(layer2, baseLayer, 40);
-        sChromaAnimationAPI.reverseAllFramesName(layer2);
-        sChromaAnimationAPI.addNonZeroAllKeysAllFramesOffsetName(layer2, baseLayer, 0);
-        sChromaAnimationAPI.addNonZeroAllKeysAllFramesOffsetName(layer2, baseLayer, 20);
-        sChromaAnimationAPI.addNonZeroAllKeysAllFramesOffsetName(layer2, baseLayer, 40);
-        sChromaAnimationAPI.fillZeroColorAllFramesRGBName(baseLayer, 60, 40, 20); //background
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    // start with a blank animation
+    String baseLayer = "animations/Particles2_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // reduce the intensity of the layer
+    sChromaAnimationAPI.multiplyIntensityAllFramesName(baseLayer, 0.25f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect11ChromaLink()
     {
-        String baseLayer = getAnimationPath()+"Blank_ChromaLink.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 8;
-        sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.1f, 0);
-        sChromaAnimationAPI.fillRandomColorsBlackAndWhiteAllFramesName(baseLayer);
-        sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(baseLayer, 0, 255, 255);
-        sChromaAnimationAPI.duplicateFramesName(baseLayer);
-        sChromaAnimationAPI.duplicateFramesName(baseLayer);
-        sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    // start with a blank animation
+    String baseLayer = "animations/Particles2_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // reduce the intensity of the layer
+    sChromaAnimationAPI.multiplyIntensityAllFramesName(baseLayer, 0.25f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect11Headset()
     {
-        String baseLayer = getAnimationPath()+"Blank_Headset.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 8;
-        sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.1f, 0);
-        sChromaAnimationAPI.fillRandomColorsBlackAndWhiteAllFramesName(baseLayer);
-        sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(baseLayer, 0, 255, 255);
-        sChromaAnimationAPI.duplicateFramesName(baseLayer);
-        sChromaAnimationAPI.duplicateFramesName(baseLayer);
-        sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(baseLayer, 0, 255, 255);
-        sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    // start with a blank animation
+    String baseLayer = "animations/Particles2_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // reduce the intensity of the layer
+    sChromaAnimationAPI.multiplyIntensityAllFramesName(baseLayer, 0.25f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect11Mousepad()
     {
-        String baseLayer = getAnimationPath()+"Blank_Mousepad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 8;
-        sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.1f, 0);
-        sChromaAnimationAPI.fillRandomColorsBlackAndWhiteAllFramesName(baseLayer);
-        sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(baseLayer, 0, 255, 255);
-        sChromaAnimationAPI.duplicateFramesName(baseLayer);
-        sChromaAnimationAPI.duplicateFramesName(baseLayer);
-        sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(baseLayer, 0, 255, 255);
-        sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    // start with a blank animation
+    String baseLayer = "animations/Particles2_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // reduce the intensity of the layer
+    sChromaAnimationAPI.multiplyIntensityAllFramesName(baseLayer, 0.25f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect11Mouse()
     {
-        String baseLayer = getAnimationPath()+"Blank_Mouse.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 8;
-        sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.1f, 0);
-        sChromaAnimationAPI.fillRandomColorsBlackAndWhiteAllFramesName(baseLayer);
-        sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(baseLayer, 0, 255, 255);
-        sChromaAnimationAPI.duplicateFramesName(baseLayer);
-        sChromaAnimationAPI.duplicateFramesName(baseLayer);
-        sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(baseLayer, 0, 255, 255);
-        sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    // start with a blank animation
+    String baseLayer = "animations/Particles2_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // reduce the intensity of the layer
+    sChromaAnimationAPI.multiplyIntensityAllFramesName(baseLayer, 0.25f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect11Keypad()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keypad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 8;
-        sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.1f, 0);
-        sChromaAnimationAPI.fillRandomColorsBlackAndWhiteAllFramesName(baseLayer);
-        sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(baseLayer, 0, 255, 255);
-        sChromaAnimationAPI.duplicateFramesName(baseLayer);
-        sChromaAnimationAPI.duplicateFramesName(baseLayer);
-        sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(baseLayer, 0, 255, 255);
-        sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    // start with a blank animation
+    String baseLayer = "animations/Particles2_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // reduce the intensity of the layer
+    sChromaAnimationAPI.multiplyIntensityAllFramesName(baseLayer, 0.25f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect12()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
-        String layer2 = getAnimationPath()+"Sword1_Keyboard.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.closeAnimationName(layer2);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        sChromaAnimationAPI.getAnimation(layer2);
-        sChromaAnimationAPI.reduceFramesName(layer2, 2);
-        sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(layer2, 255, 127, 127);
-        sChromaAnimationAPI.fillThresholdColorsAllFramesRGBName(layer2, 100, 255, 0, 0);
-        int frameId = 17;
-        sChromaAnimationAPI.trimEndFramesName(layer2, frameId);
-        int delay = 2;
-        sChromaAnimationAPI.insertDelayName(layer2, frameId, delay);
-        sChromaAnimationAPI.duplicateMirrorFramesName(layer2);
-        int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
-        sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.1f, 0);
-        sChromaAnimationAPI.fillZeroColorAllFramesRGBName(baseLayer, 32, 32, 32); //background
-        sChromaAnimationAPI.copyNonZeroAllKeysAllFramesOffsetName(layer2, baseLayer, 0);
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect12ChromaLink()
     {
-        String baseLayer = getAnimationPath()+"Blank_ChromaLink.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(255, 201, 136);
-        int color2 = sChromaAnimationAPI.getRGB(0, 45, 45);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect12Headset()
     {
-        String baseLayer = getAnimationPath()+"Blank_Headset.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(255, 201, 136);
-        int color2 = sChromaAnimationAPI.getRGB(0, 45, 45);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect12Mousepad()
     {
-        String baseLayer = getAnimationPath()+"Blank_Mousepad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(255, 201, 136);
-        int color2 = sChromaAnimationAPI.getRGB(0, 45, 45);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect12Mouse()
     {
-        String baseLayer = getAnimationPath()+"Blank_Mouse.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(255, 201, 136);
-        int color2 = sChromaAnimationAPI.getRGB(0, 45, 45);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect12Keypad()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keypad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(255, 201, 136);
-        int color2 = sChromaAnimationAPI.getRGB(0, 45, 45);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect13()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
-        String layer2 = getAnimationPath()+"Chest1_Keyboard.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.closeAnimationName(layer2);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        sChromaAnimationAPI.getAnimation(layer2);
-        sChromaAnimationAPI.duplicateMirrorFramesName(layer2);
-        sChromaAnimationAPI.insertDelayName(layer2, 0, 15);
-        sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(layer2, 260, 210, 92);
-        sChromaAnimationAPI.fillThresholdColorsAllFramesRGBName(layer2, 100, 170, 102, 15);
-        int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
-        sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.1f, 0);
-        sChromaAnimationAPI.fillZeroColorAllFramesRGBName(baseLayer, 60, 40, 20);
-        sChromaAnimationAPI.copyNonZeroAllKeysAllFramesOffsetName(layer2, baseLayer, 0);
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(baseLayer);
+    // loop over all frames in the layer
+    for (int frameId = 0; frameId < frameCount; ++frameId) {
+    // give color to the layer
+    sChromaAnimationAPI.multiplyIntensityRGBName(baseLayer, frameId, 255, 255, 0); //yellow
+    }
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect13ChromaLink()
     {
-        String baseLayer = getAnimationPath()+"Blank_ChromaLink.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(0, 64, 255);
-        int color2 = sChromaAnimationAPI.getRGB(64, 64, 64);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(baseLayer);
+    // loop over all frames in the layer
+    for (int frameId = 0; frameId < frameCount; ++frameId) {
+    // give color to the layer
+    sChromaAnimationAPI.multiplyIntensityRGBName(baseLayer, frameId, 255, 255, 0); //yellow
+    }
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect13Headset()
     {
-        String baseLayer = getAnimationPath()+"Blank_Headset.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(0, 64, 255);
-        int color2 = sChromaAnimationAPI.getRGB(64, 64, 64);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(baseLayer);
+    // loop over all frames in the layer
+    for (int frameId = 0; frameId < frameCount; ++frameId) {
+    // give color to the layer
+    sChromaAnimationAPI.multiplyIntensityRGBName(baseLayer, frameId, 255, 255, 0); //yellow
+    }
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect13Mousepad()
     {
-        String baseLayer = getAnimationPath()+"Blank_Mousepad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(0, 64, 255);
-        int color2 = sChromaAnimationAPI.getRGB(64, 64, 64);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(baseLayer);
+    // loop over all frames in the layer
+    for (int frameId = 0; frameId < frameCount; ++frameId) {
+    // give color to the layer
+    sChromaAnimationAPI.multiplyIntensityRGBName(baseLayer, frameId, 255, 255, 0); //yellow
+    }
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect13Mouse()
     {
-        String baseLayer = getAnimationPath()+"Blank_Mouse.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(0, 64, 255);
-        int color2 = sChromaAnimationAPI.getRGB(64, 64, 64);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(baseLayer);
+    // loop over all frames in the layer
+    for (int frameId = 0; frameId < frameCount; ++frameId) {
+    // give color to the layer
+    sChromaAnimationAPI.multiplyIntensityRGBName(baseLayer, frameId, 255, 255, 0); //yellow
+    }
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect13Keypad()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keypad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(0, 64, 255);
-        int color2 = sChromaAnimationAPI.getRGB(64, 64, 64);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(baseLayer);
+    // loop over all frames in the layer
+    for (int frameId = 0; frameId < frameCount; ++frameId) {
+    // give color to the layer
+    sChromaAnimationAPI.multiplyIntensityRGBName(baseLayer, frameId, 255, 255, 0); //yellow
+    }
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect14()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
-        String layer2 = getAnimationPath()+"Spiral_Keyboard.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.closeAnimationName(layer2);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        sChromaAnimationAPI.getAnimation(layer2);
-        sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(layer2, 0, 0, 255);
-        int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
-        sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.1f, 0);
-        sChromaAnimationAPI.fillZeroColorAllFramesRGBName(baseLayer, 60, 40, 20);
-        sChromaAnimationAPI.copyNonZeroAllKeysAllFramesOffsetName(layer2, baseLayer, 0);
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(baseLayer, 0, 255, 255); //cyan
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect14ChromaLink()
     {
-        String baseLayer = getAnimationPath()+"Blank_ChromaLink.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(181, 101, 82);
-        int color2 = sChromaAnimationAPI.getRGB(230, 202, 189);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(baseLayer, 0, 255, 255); //cyan
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect14Headset()
     {
-        String baseLayer = getAnimationPath()+"Blank_Headset.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(181, 101, 82);
-        int color2 = sChromaAnimationAPI.getRGB(230, 202, 189);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(baseLayer, 0, 255, 255); //cyan
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect14Mousepad()
     {
-        String baseLayer = getAnimationPath()+"Blank_Mousepad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(181, 101, 82);
-        int color2 = sChromaAnimationAPI.getRGB(230, 202, 189);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(baseLayer, 0, 255, 255); //cyan
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect14Mouse()
     {
-        String baseLayer = getAnimationPath()+"Blank_Mouse.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(181, 101, 82);
-        int color2 = sChromaAnimationAPI.getRGB(230, 202, 189);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(baseLayer, 0, 255, 255); //cyan
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect14Keypad()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keypad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(181, 101, 82);
-        int color2 = sChromaAnimationAPI.getRGB(230, 202, 189);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(baseLayer, 0, 255, 255); //cyan
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect15()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
-        String layer2 = getAnimationPath()+"Bird1_Keyboard.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.closeAnimationName(layer2);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        sChromaAnimationAPI.getAnimation(layer2);
-        sChromaAnimationAPI.reduceFramesName(layer2, 2);
-        sChromaAnimationAPI.multiplyIntensityAllFramesName(layer2, 0.9f);
-        sChromaAnimationAPI.fillThresholdColorsAllFramesRGBName(layer2, 100, 127, 127, 127);
-        int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
-        sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.1f, 0);
-        sChromaAnimationAPI.fillZeroColorAllFramesRGBName(baseLayer, 60, 40, 20);
-        sChromaAnimationAPI.copyNonZeroAllKeysAllFramesOffsetName(layer2, baseLayer, 0);
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(baseLayer);
+    int color1 = sChromaAnimationAPI.getRGB(255, 0, 0); //red
+    int color2 = sChromaAnimationAPI.getRGB(0, 255, 0); //green
+    //integer number of times to transition during animation
+    float speed = 2;
+    // loop over all frames in the layer
+    for (int frameId = 0; frameId < frameCount; ++frameId) {
+    //Math.cos gives a smooth 1 to 0 to 1 curve
+    float t = (float)Math.abs(Math.cos(speed * Math.PI * (frameId + 1) / (float)frameCount));
+    // use t to transition from color 1 to color 2
+    int color = sChromaAnimationAPI.lerpColor(color1, color2, t);
+    // give color to the layer
+    sChromaAnimationAPI.multiplyIntensityColorName(baseLayer, frameId, color);
+    }
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect15ChromaLink()
     {
-        String baseLayer = getAnimationPath()+"Blank_ChromaLink.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(255, 255, 255);
-        int color2 = sChromaAnimationAPI.getRGB(127, 127, 127);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(baseLayer);
+    int color1 = sChromaAnimationAPI.getRGB(255, 0, 0); //red
+    int color2 = sChromaAnimationAPI.getRGB(0, 255, 0); //green
+    //integer number of times to transition during animation
+    float speed = 2;
+    // loop over all frames in the layer
+    for (int frameId = 0; frameId < frameCount; ++frameId) {
+    //Math.cos gives a smooth 1 to 0 to 1 curve
+    float t = (float)Math.abs(Math.cos(speed * Math.PI * (frameId + 1) / (float)frameCount));
+    // use t to transition from color 1 to color 2
+    int color = sChromaAnimationAPI.lerpColor(color1, color2, t);
+    // give color to the layer
+    sChromaAnimationAPI.multiplyIntensityColorName(baseLayer, frameId, color);
+    }
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect15Headset()
     {
-        String baseLayer = getAnimationPath()+"Blank_Headset.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(255, 255, 255);
-        int color2 = sChromaAnimationAPI.getRGB(127, 127, 127);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(baseLayer);
+    int color1 = sChromaAnimationAPI.getRGB(255, 0, 0); //red
+    int color2 = sChromaAnimationAPI.getRGB(0, 255, 0); //green
+    //integer number of times to transition during animation
+    float speed = 2;
+    // loop over all frames in the layer
+    for (int frameId = 0; frameId < frameCount; ++frameId) {
+    //Math.cos gives a smooth 1 to 0 to 1 curve
+    	float t = (float)Math.abs(Math.cos(speed * Math.PI * (frameId + 1) / (float)frameCount));
+    // use t to transition from color 1 to color 2
+    int color = sChromaAnimationAPI.lerpColor(color1, color2, t);
+    // give color to the layer
+    sChromaAnimationAPI.multiplyIntensityColorName(baseLayer, frameId, color);
+    }
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect15Mousepad()
     {
-        String baseLayer = getAnimationPath()+"Blank_Mousepad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(255, 255, 255);
-        int color2 = sChromaAnimationAPI.getRGB(127, 127, 127);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(baseLayer);
+    int color1 = sChromaAnimationAPI.getRGB(255, 0, 0); //red
+    int color2 = sChromaAnimationAPI.getRGB(0, 255, 0); //green
+    //integer number of times to transition during animation
+    float speed = 2;
+    // loop over all frames in the layer
+    for (int frameId = 0; frameId < frameCount; ++frameId) {
+    //Math.cos gives a smooth 1 to 0 to 1 curve
+    	float t = (float)Math.abs(Math.cos(speed * Math.PI * (frameId + 1) / (float)frameCount));
+    // use t to transition from color 1 to color 2
+    int color = sChromaAnimationAPI.lerpColor(color1, color2, t);
+    // give color to the layer
+    sChromaAnimationAPI.multiplyIntensityColorName(baseLayer, frameId, color);
+    }
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect15Mouse()
     {
-        String baseLayer = getAnimationPath()+"Blank_Mouse.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(255, 255, 255);
-        int color2 = sChromaAnimationAPI.getRGB(127, 127, 127);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(baseLayer);
+    int color1 = sChromaAnimationAPI.getRGB(255, 0, 0); //red
+    int color2 = sChromaAnimationAPI.getRGB(0, 255, 0); //green
+    //integer number of times to transition during animation
+    float speed = 2;
+    // loop over all frames in the layer
+    for (int frameId = 0; frameId < frameCount; ++frameId) {
+    //Math.cos gives a smooth 1 to 0 to 1 curve
+    	float t = (float)Math.abs(Math.cos(speed * Math.PI * (frameId + 1) / (float)frameCount));
+    // use t to transition from color 1 to color 2
+    int color = sChromaAnimationAPI.lerpColor(color1, color2, t);
+    // give color to the layer
+    sChromaAnimationAPI.multiplyIntensityColorName(baseLayer, frameId, color);
+    }
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect15Keypad()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keypad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(255, 255, 255);
-        int color2 = sChromaAnimationAPI.getRGB(127, 127, 127);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(baseLayer);
+    int color1 = sChromaAnimationAPI.getRGB(255, 0, 0); //red
+    int color2 = sChromaAnimationAPI.getRGB(0, 255, 0); //green
+    //integer number of times to transition during animation
+    float speed = 2;
+    // loop over all frames in the layer
+    for (int frameId = 0; frameId < frameCount; ++frameId) {
+    //Math.cos gives a smooth 1 to 0 to 1 curve
+    	float t = (float)Math.abs(Math.cos(speed * Math.PI * (frameId + 1) / (float)frameCount));
+    // use t to transition from color 1 to color 2
+    int color = sChromaAnimationAPI.lerpColor(color1, color2, t);
+    // give color to the layer
+    sChromaAnimationAPI.multiplyIntensityColorName(baseLayer, frameId, color);
+    }
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect16()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
-        String layer2 = getAnimationPath()+"Spiral_Keyboard.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.closeAnimationName(layer2);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        sChromaAnimationAPI.getAnimation(layer2);
-        int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
-        sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.1f, 0);
-        sChromaAnimationAPI.fillZeroColorAllFramesRGBName(baseLayer, 60, 40, 20);
-        sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(layer2, 0, 0, 255);
-        sChromaAnimationAPI.copyNonZeroAllKeysAllFramesOffsetName(layer2, baseLayer, 0);
-        sChromaAnimationAPI.reverseAllFramesName(layer2);
-        sChromaAnimationAPI.fillZeroColorAllFramesRGBName(layer2, 255, 40, 255);
-        sChromaAnimationAPI.addNonZeroAllKeysAllFramesOffsetName(layer2, baseLayer, 0);
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Trails_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect16ChromaLink()
     {
-        String baseLayer = getAnimationPath()+"Blank_ChromaLink.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(0, 0, 255);
-        int color2 = sChromaAnimationAPI.getRGB(255, 0, 0);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Trails_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect16Headset()
     {
-        String baseLayer = getAnimationPath()+"Blank_Headset.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(0, 0, 255);
-        int color2 = sChromaAnimationAPI.getRGB(255, 0, 0);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Trails_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect16Mousepad()
     {
-        String baseLayer = getAnimationPath()+"Blank_Mousepad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(0, 0, 255);
-        int color2 = sChromaAnimationAPI.getRGB(255, 0, 0);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Trails_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect16Mouse()
     {
-        String baseLayer = getAnimationPath()+"Blank_Mouse.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(0, 0, 255);
-        int color2 = sChromaAnimationAPI.getRGB(255, 0, 0);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Trails_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect16Keypad()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keypad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(0, 0, 255);
-        int color2 = sChromaAnimationAPI.getRGB(255, 0, 0);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Trails_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect17()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
-        String layer2 = getAnimationPath()+"Fish1_Keyboard.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.closeAnimationName(layer2);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        sChromaAnimationAPI.getAnimation(layer2);
-        int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
-        sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.1f, 0);
-        sChromaAnimationAPI.fillZeroColorAllFramesRGBName(baseLayer, 60, 40, 20);
-        sChromaAnimationAPI.copyNonZeroAllKeysAllFramesOffsetName(layer2, baseLayer, 0);
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Trails_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(baseLayer);
+    // loop over all frames in the layer
+    for (int frameId = 0; frameId < frameCount; ++frameId) {
+    int threshold = 100;
+    // give color to the layer
+    sChromaAnimationAPI.fillThresholdColorsRGBName(baseLayer, frameId, threshold, 255, 0, 0);
+    }
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect17ChromaLink()
     {
-        String baseLayer = getAnimationPath()+"Blank_ChromaLink.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(255, 0, 0);
-        int color2 = sChromaAnimationAPI.getRGB(0, 255, 0);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Trails_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(baseLayer);
+    // loop over all frames in the layer
+    for (int frameId = 0; frameId < frameCount; ++frameId) {
+    int threshold = 100;
+    // give color to the layer
+    sChromaAnimationAPI.fillThresholdColorsRGBName(baseLayer, frameId, threshold, 255, 0, 0);
+    }
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect17Headset()
     {
-        String baseLayer = getAnimationPath()+"Blank_Headset.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(255, 0, 0);
-        int color2 = sChromaAnimationAPI.getRGB(0, 255, 0);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Trails_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(baseLayer);
+    // loop over all frames in the layer
+    for (int frameId = 0; frameId < frameCount; ++frameId) {
+    int threshold = 100;
+    // give color to the layer
+    sChromaAnimationAPI.fillThresholdColorsRGBName(baseLayer, frameId, threshold, 255, 0, 0);
+    }
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect17Mousepad()
     {
-        String baseLayer = getAnimationPath()+"Blank_Mousepad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(255, 0, 0);
-        int color2 = sChromaAnimationAPI.getRGB(0, 255, 0);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Trails_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(baseLayer);
+    // loop over all frames in the layer
+    for (int frameId = 0; frameId < frameCount; ++frameId) {
+    int threshold = 100;
+    // give color to the layer
+    sChromaAnimationAPI.fillThresholdColorsRGBName(baseLayer, frameId, threshold, 255, 0, 0);
+    }
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect17Mouse()
     {
-        String baseLayer = getAnimationPath()+"Blank_Mouse.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(255, 0, 0);
-        int color2 = sChromaAnimationAPI.getRGB(0, 255, 0);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Trails_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(baseLayer);
+    // loop over all frames in the layer
+    for (int frameId = 0; frameId < frameCount; ++frameId) {
+    int threshold = 100;
+    // give color to the layer
+    sChromaAnimationAPI.fillThresholdColorsRGBName(baseLayer, frameId, threshold, 255, 0, 0);
+    }
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect17Keypad()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keypad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(255, 0, 0);
-        int color2 = sChromaAnimationAPI.getRGB(0, 255, 0);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Trails_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(baseLayer);
+    // loop over all frames in the layer
+    for (int frameId = 0; frameId < frameCount; ++frameId) {
+    int threshold = 100;
+    // give color to the layer
+    sChromaAnimationAPI.fillThresholdColorsRGBName(baseLayer, frameId, threshold, 255, 0, 0);
+    }
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect18()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
-        String layer2 = getAnimationPath()+"Fish1_Keyboard.chroma";
-        String layer3 = getAnimationPath()+"Rainbow_Keyboard.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.closeAnimationName(layer2);
-        sChromaAnimationAPI.closeAnimationName(layer3);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        sChromaAnimationAPI.getAnimation(layer2);
-        sChromaAnimationAPI.getAnimation(layer3);
-        int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
-        sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.1f, 0);
-        sChromaAnimationAPI.fillZeroColorAllFramesRGBName(baseLayer, 60, 40, 20);
-        sChromaAnimationAPI.copyNonZeroTargetAllKeysAllFramesOffsetName(layer3, layer2, 0);
-        sChromaAnimationAPI.copyNonZeroAllKeysAllFramesOffsetName(layer2, baseLayer, 0);
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Trails_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int threshold = 50;
+    sChromaAnimationAPI.fillThresholdColorsAllFramesRGBName(baseLayer, threshold, 0, 64, 0); //dark green
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect18ChromaLink()
     {
-        String baseLayer = getAnimationPath()+"Blank_ChromaLink.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(255, 255, 0);
-        int color2 = sChromaAnimationAPI.getRGB(0, 255, 255);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Trails_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int threshold = 50;
+    sChromaAnimationAPI.fillThresholdColorsAllFramesRGBName(baseLayer, threshold, 0, 64, 0); //dark green
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect18Headset()
     {
-        String baseLayer = getAnimationPath()+"Blank_Headset.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(255, 255, 0);
-        int color2 = sChromaAnimationAPI.getRGB(0, 255, 255);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Trails_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int threshold = 50;
+    sChromaAnimationAPI.fillThresholdColorsAllFramesRGBName(baseLayer, threshold, 0, 64, 0); //dark green
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect18Mousepad()
     {
-        String baseLayer = getAnimationPath()+"Blank_Mousepad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(255, 255, 0);
-        int color2 = sChromaAnimationAPI.getRGB(0, 255, 255);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Trails_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int threshold = 50;
+    sChromaAnimationAPI.fillThresholdColorsAllFramesRGBName(baseLayer, threshold, 0, 64, 0); //dark green
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect18Mouse()
     {
-        String baseLayer = getAnimationPath()+"Blank_Mouse.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(255, 255, 0);
-        int color2 = sChromaAnimationAPI.getRGB(0, 255, 255);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Trails_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int threshold = 50;
+    sChromaAnimationAPI.fillThresholdColorsAllFramesRGBName(baseLayer, threshold, 0, 64, 0); //dark green
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect18Keypad()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keypad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(255, 255, 0);
-        int color2 = sChromaAnimationAPI.getRGB(0, 255, 255);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Trails_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int threshold = 50;
+    sChromaAnimationAPI.fillThresholdColorsAllFramesRGBName(baseLayer, threshold, 0, 64, 0); //dark green
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect19()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
-        String layer2 = getAnimationPath()+"Swim1_Keyboard.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.closeAnimationName(layer2);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        sChromaAnimationAPI.getAnimation(layer2);
-        int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
-        sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.1f, 0);
-        sChromaAnimationAPI.fillZeroColorAllFramesRGBName(baseLayer, 60, 40, 20);
-        sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(layer2, 200, 200, 127);
-        sChromaAnimationAPI.copyNonZeroAllKeysAllFramesOffsetName(layer2, baseLayer, 0);
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Trails_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int minThreshold = 50; //dark cyan
+    int maxThreshold = 150; //purple
+    sChromaAnimationAPI.fillThresholdColorsMinMaxAllFramesRGBName(baseLayer, minThreshold, 0, 63, 63, maxThreshold, 127, 0, 127);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect19ChromaLink()
     {
-        String baseLayer = getAnimationPath()+"Blank_ChromaLink.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(0, 255, 0);
-        int color2 = sChromaAnimationAPI.getRGB(0, 255, 255);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Trails_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int minThreshold = 50; //dark cyan
+    int maxThreshold = 150; //purple
+    sChromaAnimationAPI.fillThresholdColorsMinMaxAllFramesRGBName(baseLayer, minThreshold, 0, 63, 63, maxThreshold, 127, 0, 127);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect19Headset()
     {
-        String baseLayer = getAnimationPath()+"Blank_Headset.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(0, 255, 0);
-        int color2 = sChromaAnimationAPI.getRGB(0, 255, 255);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Trails_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int minThreshold = 50; //dark cyan
+    int maxThreshold = 150; //purple
+    sChromaAnimationAPI.fillThresholdColorsMinMaxAllFramesRGBName(baseLayer, minThreshold, 0, 63, 63, maxThreshold, 127, 0, 127);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect19Mousepad()
     {
-        String baseLayer = getAnimationPath()+"Blank_Mousepad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(0, 255, 0);
-        int color2 = sChromaAnimationAPI.getRGB(0, 255, 255);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Trails_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int minThreshold = 50; //dark cyan
+    int maxThreshold = 150; //purple
+    sChromaAnimationAPI.fillThresholdColorsMinMaxAllFramesRGBName(baseLayer, minThreshold, 0, 63, 63, maxThreshold, 127, 0, 127);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect19Mouse()
     {
-        String baseLayer = getAnimationPath()+"Blank_Mouse.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(0, 255, 0);
-        int color2 = sChromaAnimationAPI.getRGB(0, 255, 255);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Trails_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int minThreshold = 50; //dark cyan
+    int maxThreshold = 150; //purple
+    sChromaAnimationAPI.fillThresholdColorsMinMaxAllFramesRGBName(baseLayer, minThreshold, 0, 63, 63, maxThreshold, 127, 0, 127);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect19Keypad()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keypad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(0, 255, 0);
-        int color2 = sChromaAnimationAPI.getRGB(0, 255, 255);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Trails_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int minThreshold = 50; //dark cyan
+    int maxThreshold = 150; //purple
+    sChromaAnimationAPI.fillThresholdColorsMinMaxAllFramesRGBName(baseLayer, minThreshold, 0, 63, 63, maxThreshold, 127, 0, 127);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect20()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
-        String layer2 = getAnimationPath()+"Bubbles1_Keyboard.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.closeAnimationName(layer2);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        sChromaAnimationAPI.getAnimation(layer2);
-        int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
-        sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.1f, 0);
-        sChromaAnimationAPI.fillZeroColorAllFramesRGBName(baseLayer, 60, 40, 20);
-        sChromaAnimationAPI.copyNonZeroAllKeysAllFramesOffsetName(layer2, baseLayer, 0);
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Arc3_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect20ChromaLink()
     {
-        String baseLayer = getAnimationPath()+"Blank_ChromaLink.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(0, 255, 255);
-        int color2 = sChromaAnimationAPI.getRGB(0, 0, 255);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Arc3_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect20Headset()
     {
-        String baseLayer = getAnimationPath()+"Blank_Headset.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(0, 255, 255);
-        int color2 = sChromaAnimationAPI.getRGB(0, 0, 255);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Arc3_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect20Mousepad()
     {
-        String baseLayer = getAnimationPath()+"Blank_Mousepad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(0, 255, 255);
-        int color2 = sChromaAnimationAPI.getRGB(0, 0, 255);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Arc3_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect20Mouse()
     {
-        String baseLayer = getAnimationPath()+"Blank_Mouse.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(255, 255, 255);
-        int color2 = sChromaAnimationAPI.getRGB(0, 0, 255);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Arc3_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect20Keypad()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keypad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(255, 255, 255);
-        int color2 = sChromaAnimationAPI.getRGB(0, 0, 255);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    // start with a blank animation
+    String baseLayer = "animations/Arc3_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect21()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
-        String layer2 = getAnimationPath()+"Particle1_Keyboard.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.closeAnimationName(layer2);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        sChromaAnimationAPI.getAnimation(layer2);
-        int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
-        sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.1f, 0);
-        sChromaAnimationAPI.fillZeroColorAllFramesRGBName(baseLayer, 60, 40, 20);
-        sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(layer2, 200, 200, 255);
-        sChromaAnimationAPI.copyNonZeroAllKeysAllFramesOffsetName(layer2, baseLayer, 0);
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
+    String layer2 = "animations/Arc3_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.closeAnimationName(layer2);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.getAnimation(layer2);
+    int background = sChromaAnimationAPI.getRGB(127, 0, 0);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, background);
+    // copy non zero colors from layer 2 to the base layer
+    sChromaAnimationAPI.copyNonZeroAllKeysAllFramesName(layer2, baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect21ChromaLink()
     {
-        String baseLayer = getAnimationPath()+"Blank_ChromaLink.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(255, 255, 255);
-        int color2 = sChromaAnimationAPI.getRGB(0, 255, 255);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_ChromaLink.chroma";
+    String layer2 = "animations/Arc3_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.closeAnimationName(layer2);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.getAnimation(layer2);
+    int background = sChromaAnimationAPI.getRGB(127, 0, 0);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, background);
+    // copy non zero colors from layer 2 to the base layer
+    sChromaAnimationAPI.copyNonZeroAllKeysAllFramesName(layer2, baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect21Headset()
     {
-        String baseLayer = getAnimationPath()+"Blank_Headset.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(255, 255, 255);
-        int color2 = sChromaAnimationAPI.getRGB(0, 255, 255);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Headset.chroma";
+    String layer2 = "animations/Arc3_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.closeAnimationName(layer2);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.getAnimation(layer2);
+    int background = sChromaAnimationAPI.getRGB(127, 0, 0);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, background);
+    // copy non zero colors from layer 2 to the base layer
+    sChromaAnimationAPI.copyNonZeroAllKeysAllFramesName(layer2, baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect21Mousepad()
     {
-        String baseLayer = getAnimationPath()+"Blank_Mousepad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(255, 255, 255);
-        int color2 = sChromaAnimationAPI.getRGB(0, 255, 255);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Mousepad.chroma";
+    String layer2 = "animations/Arc3_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.closeAnimationName(layer2);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.getAnimation(layer2);
+    int background = sChromaAnimationAPI.getRGB(127, 0, 0);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, background);
+    // copy non zero colors from layer 2 to the base layer
+    sChromaAnimationAPI.copyNonZeroAllKeysAllFramesName(layer2, baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect21Mouse()
     {
-        String baseLayer = getAnimationPath()+"Blank_Mouse.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(255, 255, 255);
-        int color2 = sChromaAnimationAPI.getRGB(0, 255, 255);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Mouse.chroma";
+    String layer2 = "animations/Arc3_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.closeAnimationName(layer2);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.getAnimation(layer2);
+    int background = sChromaAnimationAPI.getRGB(127, 0, 0);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, background);
+    // copy non zero colors from layer 2 to the base layer
+    sChromaAnimationAPI.copyNonZeroAllKeysAllFramesName(layer2, baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect21Keypad()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keypad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(255, 255, 255);
-        int color2 = sChromaAnimationAPI.getRGB(0, 255, 255);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Keypad.chroma";
+    String layer2 = "animations/Arc3_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.closeAnimationName(layer2);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.getAnimation(layer2);
+    int background = sChromaAnimationAPI.getRGB(127, 0, 0);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, background);
+    // copy non zero colors from layer 2 to the base layer
+    sChromaAnimationAPI.copyNonZeroAllKeysAllFramesName(layer2, baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect22()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
-        String layer2 = getAnimationPath()+"UpParticle3_Keyboard.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.closeAnimationName(layer2);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        sChromaAnimationAPI.getAnimation(layer2);
-        int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
-        sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.1f, 0);
-        sChromaAnimationAPI.fillZeroColorAllFramesRGBName(baseLayer, 60, 40, 20);
-        sChromaAnimationAPI.reverseAllFramesName(layer2);
-        sChromaAnimationAPI.multiplyIntensityAllFramesRGBName(layer2, 64, 64, 255);
-        sChromaAnimationAPI.copyNonZeroAllKeysAllFramesOffsetName(layer2, baseLayer, 0);
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
-        sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
+    String layer2 = "animations/Arc3_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.closeAnimationName(layer2);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.getAnimation(layer2);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
+    // setup background color on the base layer
+    int background = sChromaAnimationAPI.getRGB(127, 0, 0);
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, background);
+    // replace darker colors with background color
+    sChromaAnimationAPI.fillThresholdColorsAllFramesName(layer2, 64, background);
+    // copy non zero colors from layer 2 to the base layer
+    sChromaAnimationAPI.copyNonZeroAllKeysAllFramesName(layer2, baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect22ChromaLink()
     {
-        String baseLayer = getAnimationPath()+"Blank_ChromaLink.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(0, 255, 255);
-        int color2 = sChromaAnimationAPI.getRGB(64, 64, 255);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_ChromaLink.chroma";
+    String layer2 = "animations/Arc3_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.closeAnimationName(layer2);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.getAnimation(layer2);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
+    // setup background color on the base layer
+    int background = sChromaAnimationAPI.getRGB(127, 0, 0);
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, background);
+    // replace darker colors with background color
+    sChromaAnimationAPI.fillThresholdColorsAllFramesName(layer2, 64, background);
+    // copy non zero colors from layer 2 to the base layer
+    sChromaAnimationAPI.copyNonZeroAllKeysAllFramesName(layer2, baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect22Headset()
     {
-        String baseLayer = getAnimationPath()+"Blank_Headset.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(0, 255, 255);
-        int color2 = sChromaAnimationAPI.getRGB(64, 64, 255);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Headset.chroma";
+    String layer2 = "animations/Arc3_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.closeAnimationName(layer2);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.getAnimation(layer2);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
+    // setup background color on the base layer
+    int background = sChromaAnimationAPI.getRGB(127, 0, 0);
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, background);
+    // replace darker colors with background color
+    sChromaAnimationAPI.fillThresholdColorsAllFramesName(layer2, 64, background);
+    // copy non zero colors from layer 2 to the base layer
+    sChromaAnimationAPI.copyNonZeroAllKeysAllFramesName(layer2, baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect22Mousepad()
     {
-        String baseLayer = getAnimationPath()+"Blank_Mousepad.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(0, 255, 255);
-        int color2 = sChromaAnimationAPI.getRGB(64, 64, 255);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Mousepad.chroma";
+    String layer2 = "animations/Arc3_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.closeAnimationName(layer2);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.getAnimation(layer2);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
+    // setup background color on the base layer
+    int background = sChromaAnimationAPI.getRGB(127, 0, 0);
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, background);
+    // replace darker colors with background color
+    sChromaAnimationAPI.fillThresholdColorsAllFramesName(layer2, 64, background);
+    // copy non zero colors from layer 2 to the base layer
+    sChromaAnimationAPI.copyNonZeroAllKeysAllFramesName(layer2, baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect22Mouse()
     {
-        String baseLayer = getAnimationPath()+"Blank_Mouse.chroma";
-        sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(0, 255, 255);
-        int color2 = sChromaAnimationAPI.getRGB(64, 64, 255);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
-        sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
-        sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Mouse.chroma";
+    String layer2 = "animations/Arc3_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.closeAnimationName(layer2);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.getAnimation(layer2);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
+    // setup background color on the base layer
+    int background = sChromaAnimationAPI.getRGB(127, 0, 0);
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, background);
+    // replace darker colors with background color
+    sChromaAnimationAPI.fillThresholdColorsAllFramesName(layer2, 64, background);
+    // copy non zero colors from layer 2 to the base layer
+    sChromaAnimationAPI.copyNonZeroAllKeysAllFramesName(layer2, baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
     public static void showEffect22Keypad()
     {
-        String baseLayer = getAnimationPath()+"Blank_Keypad.chroma";
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Keypad.chroma";
+    String layer2 = "animations/Arc3_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.closeAnimationName(layer2);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.getAnimation(layer2);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
+    // setup background color on the base layer
+    int background = sChromaAnimationAPI.getRGB(127, 0, 0);
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, background);
+    // replace darker colors with background color
+    sChromaAnimationAPI.fillThresholdColorsAllFramesName(layer2, 64, background);
+    // copy non zero colors from layer 2 to the base layer
+    sChromaAnimationAPI.copyNonZeroAllKeysAllFramesName(layer2, baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect23()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
+    String layer2 = "animations/Arc3_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.closeAnimationName(layer2);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.getAnimation(layer2);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
+    // setup background color on the base layer
+    int background = sChromaAnimationAPI.getRGB(127, 0, 0);
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, background);
+    // Add non zero colors from layer 2 to the base layer
+    sChromaAnimationAPI.addNonZeroAllKeysAllFramesName(layer2, baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect23ChromaLink()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_ChromaLink.chroma";
+    String layer2 = "animations/Arc3_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.closeAnimationName(layer2);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.getAnimation(layer2);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
+    // setup background color on the base layer
+    int background = sChromaAnimationAPI.getRGB(127, 0, 0);
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, background);
+    // Add non zero colors from layer 2 to the base layer
+    sChromaAnimationAPI.addNonZeroAllKeysAllFramesName(layer2, baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect23Headset()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Headset.chroma";
+    String layer2 = "animations/Arc3_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.closeAnimationName(layer2);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.getAnimation(layer2);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
+    // setup background color on the base layer
+    int background = sChromaAnimationAPI.getRGB(127, 0, 0);
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, background);
+    // Add non zero colors from layer 2 to the base layer
+    sChromaAnimationAPI.addNonZeroAllKeysAllFramesName(layer2, baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect23Mousepad()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Mousepad.chroma";
+    String layer2 = "animations/Arc3_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.closeAnimationName(layer2);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.getAnimation(layer2);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
+    // setup background color on the base layer
+    int background = sChromaAnimationAPI.getRGB(127, 0, 0);
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, background);
+    // Add non zero colors from layer 2 to the base layer
+    sChromaAnimationAPI.addNonZeroAllKeysAllFramesName(layer2, baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect23Mouse()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Mouse.chroma";
+    String layer2 = "animations/Arc3_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.closeAnimationName(layer2);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.getAnimation(layer2);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
+    // setup background color on the base layer
+    int background = sChromaAnimationAPI.getRGB(127, 0, 0);
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, background);
+    // Add non zero colors from layer 2 to the base layer
+    sChromaAnimationAPI.addNonZeroAllKeysAllFramesName(layer2, baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect23Keypad()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Keypad.chroma";
+    String layer2 = "animations/Arc3_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.closeAnimationName(layer2);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.getAnimation(layer2);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
+    // setup background color on the base layer
+    int background = sChromaAnimationAPI.getRGB(127, 0, 0);
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, background);
+    // Add non zero colors from layer 2 to the base layer
+    sChromaAnimationAPI.addNonZeroAllKeysAllFramesName(layer2, baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect24()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
+    String layer2 = "animations/Arc3_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.closeAnimationName(layer2);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.getAnimation(layer2);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
+    // setup background color on the base layer
+    int background = sChromaAnimationAPI.getRGB(127, 0, 0);
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, background);
+    // Add non zero colors from layer 2 to the base layer
+    sChromaAnimationAPI.subtractNonZeroAllKeysAllFramesName(layer2, baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect24ChromaLink()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_ChromaLink.chroma";
+    String layer2 = "animations/Arc3_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.closeAnimationName(layer2);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.getAnimation(layer2);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
+    // setup background color on the base layer
+    int background = sChromaAnimationAPI.getRGB(127, 0, 0);
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, background);
+    // Add non zero colors from layer 2 to the base layer
+    sChromaAnimationAPI.subtractNonZeroAllKeysAllFramesName(layer2, baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect24Headset()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Headset.chroma";
+    String layer2 = "animations/Arc3_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.closeAnimationName(layer2);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.getAnimation(layer2);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
+    // setup background color on the base layer
+    int background = sChromaAnimationAPI.getRGB(127, 0, 0);
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, background);
+    // Add non zero colors from layer 2 to the base layer
+    sChromaAnimationAPI.subtractNonZeroAllKeysAllFramesName(layer2, baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect24Mousepad()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Mousepad.chroma";
+    String layer2 = "animations/Arc3_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.closeAnimationName(layer2);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.getAnimation(layer2);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
+    // setup background color on the base layer
+    int background = sChromaAnimationAPI.getRGB(127, 0, 0);
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, background);
+    // Add non zero colors from layer 2 to the base layer
+    sChromaAnimationAPI.subtractNonZeroAllKeysAllFramesName(layer2, baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect24Mouse()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Mouse.chroma";
+    String layer2 = "animations/Arc3_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.closeAnimationName(layer2);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.getAnimation(layer2);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
+    // setup background color on the base layer
+    int background = sChromaAnimationAPI.getRGB(127, 0, 0);
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, background);
+    // Add non zero colors from layer 2 to the base layer
+    sChromaAnimationAPI.subtractNonZeroAllKeysAllFramesName(layer2, baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect24Keypad()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Keypad.chroma";
+    String layer2 = "animations/Arc3_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.closeAnimationName(layer2);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.getAnimation(layer2);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
+    // setup background color on the base layer
+    int background = sChromaAnimationAPI.getRGB(127, 0, 0);
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, background);
+    // Add non zero colors from layer 2 to the base layer
+    sChromaAnimationAPI.subtractNonZeroAllKeysAllFramesName(layer2, baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect25()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"CircleSmall_Keyboard.chroma";
+    String layer2 = "animations/Rainbow_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.closeAnimationName(layer2);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.getAnimation(layer2);
+    int frameCount = sChromaAnimationAPI.getFrameCountName(layer2);
+    sChromaAnimationAPI.duplicateFirstFrameName(baseLayer, frameCount);
+    // copy non zero colors from layer 2 to the base layer where the base layer was non zero
+    sChromaAnimationAPI.copyNonZeroTargetAllKeysAllFramesName(layer2, baseLayer);
+    // set a background color
+    sChromaAnimationAPI.fillZeroColorAllFramesRGBName(baseLayer, 255, 0, 0);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect25ChromaLink()
+    {
+    String baseLayer = "animations/Rainbow_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect25Headset()
+    {
+    String baseLayer = "animations/Rainbow_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect25Mousepad()
+    {
+    String baseLayer = "animations/Rainbow_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect25Mouse()
+    {
+    String baseLayer = "animations/Rainbow_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect25Keypad()
+    {
+    String baseLayer = "animations/Rainbow_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect26()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect26ChromaLink()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect26Headset()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect26Mousepad()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect26Mouse()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect26Keypad()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect27()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect27ChromaLink()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect27Headset()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect27Mousepad()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect27Mouse()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect27Keypad()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect28()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // reverse the order of frames
+    sChromaAnimationAPI.reverseAllFramesName(baseLayer);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect28ChromaLink()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // reverse the order of frames
+    sChromaAnimationAPI.reverseAllFramesName(baseLayer);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect28Headset()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // reverse the order of frames
+    sChromaAnimationAPI.reverseAllFramesName(baseLayer);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect28Mousepad()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // reverse the order of frames
+    sChromaAnimationAPI.reverseAllFramesName(baseLayer);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect28Mouse()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // reverse the order of frames
+    sChromaAnimationAPI.reverseAllFramesName(baseLayer);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect28Keypad()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // reverse the order of frames
+    sChromaAnimationAPI.reverseAllFramesName(baseLayer);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect29()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // invert all the animation colors
+    sChromaAnimationAPI.invertColorsAllFramesName(baseLayer);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect29ChromaLink()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // invert all the animation colors
+    sChromaAnimationAPI.invertColorsAllFramesName(baseLayer);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect29Headset()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // invert all the animation colors
+    sChromaAnimationAPI.invertColorsAllFramesName(baseLayer);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect29Mousepad()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // invert all the animation colors
+    sChromaAnimationAPI.invertColorsAllFramesName(baseLayer);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect29Mouse()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // invert all the animation colors
+    sChromaAnimationAPI.invertColorsAllFramesName(baseLayer);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect29Keypad()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // invert all the animation colors
+    sChromaAnimationAPI.invertColorsAllFramesName(baseLayer);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect30()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // duplicate and mirror
+    sChromaAnimationAPI.duplicateMirrorFramesName(baseLayer);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect30ChromaLink()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // duplicate and mirror
+    sChromaAnimationAPI.duplicateMirrorFramesName(baseLayer);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect30Headset()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // duplicate and mirror
+    sChromaAnimationAPI.duplicateMirrorFramesName(baseLayer);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect30Mousepad()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // duplicate and mirror
+    sChromaAnimationAPI.duplicateMirrorFramesName(baseLayer);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect30Mouse()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // duplicate and mirror
+    sChromaAnimationAPI.duplicateMirrorFramesName(baseLayer);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect30Keypad()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // duplicate and mirror
+    sChromaAnimationAPI.duplicateMirrorFramesName(baseLayer);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect31()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // insert a pause
+    int frameId = 50;
+    int delay = 20;
+    sChromaAnimationAPI.insertDelayName(baseLayer, frameId, delay);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect31ChromaLink()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // insert a pause
+    int frameId = 50;
+    int delay = 20;
+    sChromaAnimationAPI.insertDelayName(baseLayer, frameId, delay);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect31Headset()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // insert a pause
+    int frameId = 50;
+    int delay = 20;
+    sChromaAnimationAPI.insertDelayName(baseLayer, frameId, delay);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect31Mousepad()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // insert a pause
+    int frameId = 50;
+    int delay = 20;
+    sChromaAnimationAPI.insertDelayName(baseLayer, frameId, delay);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect31Mouse()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // insert a pause
+    int frameId = 50;
+    int delay = 20;
+    sChromaAnimationAPI.insertDelayName(baseLayer, frameId, delay);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect31Keypad()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // insert a pause
+    int frameId = 50;
+    int delay = 20;
+    sChromaAnimationAPI.insertDelayName(baseLayer, frameId, delay);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect32()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // reduce half of the frames, remove every 2nd frame
+    sChromaAnimationAPI.reduceFramesName(baseLayer, 2);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect32ChromaLink()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // reduce half of the frames, remove every 2nd frame
+    sChromaAnimationAPI.reduceFramesName(baseLayer, 2);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect32Headset()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // reduce half of the frames, remove every 2nd frame
+    sChromaAnimationAPI.reduceFramesName(baseLayer, 2);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect32Mousepad()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // reduce half of the frames, remove every 2nd frame
+    sChromaAnimationAPI.reduceFramesName(baseLayer, 2);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect32Mouse()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // reduce half of the frames, remove every 2nd frame
+    sChromaAnimationAPI.reduceFramesName(baseLayer, 2);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect32Keypad()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // reduce half of the frames, remove every 2nd frame
+    sChromaAnimationAPI.reduceFramesName(baseLayer, 2);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect33()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // double the number of the frames
+    sChromaAnimationAPI.duplicateFramesName(baseLayer);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect33ChromaLink()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // double the number of the frames
+    sChromaAnimationAPI.duplicateFramesName(baseLayer);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect33Headset()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // double the number of the frames
+    sChromaAnimationAPI.duplicateFramesName(baseLayer);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect33Mousepad()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // double the number of the frames
+    sChromaAnimationAPI.duplicateFramesName(baseLayer);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect33Mouse()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // double the number of the frames
+    sChromaAnimationAPI.duplicateFramesName(baseLayer);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect33Keypad()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // double the number of the frames
+    sChromaAnimationAPI.duplicateFramesName(baseLayer);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect34()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // trim the start of the animation, so it starts at frame 10
+    sChromaAnimationAPI.trimStartFramesName(baseLayer, 10);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect34ChromaLink()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // trim the start of the animation, so it starts at frame 10
+    sChromaAnimationAPI.trimStartFramesName(baseLayer, 10);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect34Headset()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // trim the start of the animation, so it starts at frame 10
+    sChromaAnimationAPI.trimStartFramesName(baseLayer, 10);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect34Mousepad()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // trim the start of the animation, so it starts at frame 10
+    sChromaAnimationAPI.trimStartFramesName(baseLayer, 10);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect34Mouse()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // trim the start of the animation, so it starts at frame 10
+    sChromaAnimationAPI.trimStartFramesName(baseLayer, 10);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect34Keypad()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // trim the start of the animation, so it starts at frame 10
+    sChromaAnimationAPI.trimStartFramesName(baseLayer, 10);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect35()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // trim the start of the animation, so it starts at frame 10
+    sChromaAnimationAPI.trimStartFramesName(baseLayer, 10);
+    // trim the end of the animation
+    sChromaAnimationAPI.trimEndFramesName(baseLayer, 75);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect35ChromaLink()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // trim the start of the animation, so it starts at frame 10
+    sChromaAnimationAPI.trimStartFramesName(baseLayer, 10);
+    // trim the end of the animation
+    sChromaAnimationAPI.trimEndFramesName(baseLayer, 75);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect35Headset()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // trim the start of the animation, so it starts at frame 10
+    sChromaAnimationAPI.trimStartFramesName(baseLayer, 10);
+    // trim the end of the animation
+    sChromaAnimationAPI.trimEndFramesName(baseLayer, 75);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect35Mousepad()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // trim the start of the animation, so it starts at frame 10
+    sChromaAnimationAPI.trimStartFramesName(baseLayer, 10);
+    // trim the end of the animation
+    sChromaAnimationAPI.trimEndFramesName(baseLayer, 75);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect35Mouse()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // trim the start of the animation, so it starts at frame 10
+    sChromaAnimationAPI.trimStartFramesName(baseLayer, 10);
+    // trim the end of the animation
+    sChromaAnimationAPI.trimEndFramesName(baseLayer, 75);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect35Keypad()
+    {
+    // start with a blank animation
+    String baseLayer = "animations/Movement_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // trim the start of the animation, so it starts at frame 10
+    sChromaAnimationAPI.trimStartFramesName(baseLayer, 10);
+    // trim the end of the animation
+    sChromaAnimationAPI.trimEndFramesName(baseLayer, 75);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect36()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"CircleSmall_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = 20;
+    sChromaAnimationAPI.duplicateFirstFrameName(baseLayer, frameCount);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect36ChromaLink()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // green
+    sChromaAnimationAPI.fillZeroColorAllFramesRGBName(baseLayer, 0, 255, 0);
+    int frameCount = 20;
+    sChromaAnimationAPI.duplicateFirstFrameName(baseLayer, frameCount);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect36Headset()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // green
+    sChromaAnimationAPI.fillZeroColorAllFramesRGBName(baseLayer, 0, 255, 0);
+    int frameCount = 20;
+    sChromaAnimationAPI.duplicateFirstFrameName(baseLayer, frameCount);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect36Mousepad()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // green
+    sChromaAnimationAPI.fillZeroColorAllFramesRGBName(baseLayer, 0, 255, 0);
+    int frameCount = 20;
+    sChromaAnimationAPI.duplicateFirstFrameName(baseLayer, frameCount);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect36Mouse()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // green
+    sChromaAnimationAPI.fillZeroColorAllFramesRGBName(baseLayer, 0, 255, 0);
+    int frameCount = 20;
+    sChromaAnimationAPI.duplicateFirstFrameName(baseLayer, frameCount);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect36Keypad()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // green
+    sChromaAnimationAPI.fillZeroColorAllFramesRGBName(baseLayer, 0, 255, 0);
+    int frameCount = 20;
+    sChromaAnimationAPI.duplicateFirstFrameName(baseLayer, frameCount);
+    // set animation playback to 30 FPS
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect37()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = 20;
+    // Start with blank frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, 0);
+    // Fill all frames with black and white static
+    sChromaAnimationAPI.fillRandomColorsBlackAndWhiteAllFramesName(baseLayer);
+    // slow down the random frames so it can be seen
+    sChromaAnimationAPI.duplicateFramesName(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect37ChromaLink()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = 20;
+    // Start with blank frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, 0);
+    // Fill all frames with black and white static
+    sChromaAnimationAPI.fillRandomColorsBlackAndWhiteAllFramesName(baseLayer);
+    // slow down the random frames so it can be seen
+    sChromaAnimationAPI.duplicateFramesName(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect37Headset()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = 20;
+    // Start with blank frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, 0);
+    // Fill all frames with black and white static
+    sChromaAnimationAPI.fillRandomColorsBlackAndWhiteAllFramesName(baseLayer);
+    // slow down the random frames so it can be seen
+    sChromaAnimationAPI.duplicateFramesName(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect37Mousepad()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = 20;
+    // Start with blank frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, 0);
+    // Fill all frames with black and white static
+    sChromaAnimationAPI.fillRandomColorsBlackAndWhiteAllFramesName(baseLayer);
+    // slow down the random frames so it can be seen
+    sChromaAnimationAPI.duplicateFramesName(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect37Mouse()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = 20;
+    // Start with blank frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, 0);
+    // Fill all frames with black and white static
+    sChromaAnimationAPI.fillRandomColorsBlackAndWhiteAllFramesName(baseLayer);
+    // slow down the random frames so it can be seen
+    sChromaAnimationAPI.duplicateFramesName(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect37Keypad()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = 20;
+    // Start with blank frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, 0);
+    // Fill all frames with black and white static
+    sChromaAnimationAPI.fillRandomColorsBlackAndWhiteAllFramesName(baseLayer);
+    // slow down the random frames so it can be seen
+    sChromaAnimationAPI.duplicateFramesName(baseLayer);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect38()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = 20;
+    // Start with blank frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, 0);
+    // Fill all frames with black and white static
+    sChromaAnimationAPI.fillRandomColorsBlackAndWhiteAllFramesName(baseLayer);
+    // slow down the random frames so it can be seen
+    sChromaAnimationAPI.duplicateFramesName(baseLayer);
+    // make random colors more sparse using threshold
+    int threshold = 240;
+    // turn lower intensity colors to black
+    sChromaAnimationAPI.fillThresholdColorsAllFramesName(baseLayer, threshold, 0);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect38ChromaLink()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = 20;
+    // Start with blank frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, 0);
+    // Fill all frames with black and white static
+    sChromaAnimationAPI.fillRandomColorsBlackAndWhiteAllFramesName(baseLayer);
+    // slow down the random frames so it can be seen
+    sChromaAnimationAPI.duplicateFramesName(baseLayer);
+    // make random colors more sparse using threshold
+    int threshold = 240;
+    // turn lower intensity colors to black
+    sChromaAnimationAPI.fillThresholdColorsAllFramesName(baseLayer, threshold, 0);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect38Headset()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = 20;
+    // Start with blank frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, 0);
+    // Fill all frames with black and white static
+    sChromaAnimationAPI.fillRandomColorsBlackAndWhiteAllFramesName(baseLayer);
+    // slow down the random frames so it can be seen
+    sChromaAnimationAPI.duplicateFramesName(baseLayer);
+    // make random colors more sparse using threshold
+    int threshold = 240;
+    // turn lower intensity colors to black
+    sChromaAnimationAPI.fillThresholdColorsAllFramesName(baseLayer, threshold, 0);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect38Mousepad()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = 20;
+    // Start with blank frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, 0);
+    // Fill all frames with black and white static
+    sChromaAnimationAPI.fillRandomColorsBlackAndWhiteAllFramesName(baseLayer);
+    // slow down the random frames so it can be seen
+    sChromaAnimationAPI.duplicateFramesName(baseLayer);
+    // make random colors more sparse using threshold
+    int threshold = 240;
+    // turn lower intensity colors to black
+    sChromaAnimationAPI.fillThresholdColorsAllFramesName(baseLayer, threshold, 0);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect38Mouse()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = 20;
+    // Start with blank frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, 0);
+    // Fill all frames with black and white static
+    sChromaAnimationAPI.fillRandomColorsBlackAndWhiteAllFramesName(baseLayer);
+    // slow down the random frames so it can be seen
+    sChromaAnimationAPI.duplicateFramesName(baseLayer);
+    // make random colors more sparse using threshold
+    int threshold = 240;
+    // turn lower intensity colors to black
+    sChromaAnimationAPI.fillThresholdColorsAllFramesName(baseLayer, threshold, 0);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect38Keypad()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = 20;
+    // Start with blank frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, 0);
+    // Fill all frames with black and white static
+    sChromaAnimationAPI.fillRandomColorsBlackAndWhiteAllFramesName(baseLayer);
+    // slow down the random frames so it can be seen
+    sChromaAnimationAPI.duplicateFramesName(baseLayer);
+    // make random colors more sparse using threshold
+    int threshold = 240;
+    // turn lower intensity colors to black
+    sChromaAnimationAPI.fillThresholdColorsAllFramesName(baseLayer, threshold, 0);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect39()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = 20;
+    // Start with blank frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, 0);
+    // Fill all frames with black and white static
+    sChromaAnimationAPI.fillRandomColorsBlackAndWhiteAllFramesName(baseLayer);
+    // slow down the random frames so it can be seen
+    sChromaAnimationAPI.duplicateFramesName(baseLayer);
+    int minThreshold = 240; //black
+    int maxThreshold = 240; //rain
+    sChromaAnimationAPI.fillThresholdColorsMinMaxAllFramesRGBName(baseLayer, minThreshold, 0, 0, 0, maxThreshold, 0, 127, 255);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect39ChromaLink()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = 20;
+    // Start with blank frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, 0);
+    // Fill all frames with black and white static
+    sChromaAnimationAPI.fillRandomColorsBlackAndWhiteAllFramesName(baseLayer);
+    // slow down the random frames so it can be seen
+    sChromaAnimationAPI.duplicateFramesName(baseLayer);
+    int minThreshold = 240; //black
+    int maxThreshold = 240; //rain
+    sChromaAnimationAPI.fillThresholdColorsMinMaxAllFramesRGBName(baseLayer, minThreshold, 0, 0, 0, maxThreshold, 0, 127, 255);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect39Headset()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = 20;
+    // Start with blank frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, 0);
+    // Fill all frames with black and white static
+    sChromaAnimationAPI.fillRandomColorsBlackAndWhiteAllFramesName(baseLayer);
+    // slow down the random frames so it can be seen
+    sChromaAnimationAPI.duplicateFramesName(baseLayer);
+    int minThreshold = 240; //black
+    int maxThreshold = 240; //rain
+    sChromaAnimationAPI.fillThresholdColorsMinMaxAllFramesRGBName(baseLayer, minThreshold, 0, 0, 0, maxThreshold, 0, 127, 255);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect39Mousepad()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = 20;
+    // Start with blank frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, 0);
+    // Fill all frames with black and white static
+    sChromaAnimationAPI.fillRandomColorsBlackAndWhiteAllFramesName(baseLayer);
+    // slow down the random frames so it can be seen
+    sChromaAnimationAPI.duplicateFramesName(baseLayer);
+    int minThreshold = 240; //black
+    int maxThreshold = 240; //rain
+    sChromaAnimationAPI.fillThresholdColorsMinMaxAllFramesRGBName(baseLayer, minThreshold, 0, 0, 0, maxThreshold, 0, 127, 255);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect39Mouse()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = 20;
+    // Start with blank frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, 0);
+    // Fill all frames with black and white static
+    sChromaAnimationAPI.fillRandomColorsBlackAndWhiteAllFramesName(baseLayer);
+    // slow down the random frames so it can be seen
+    sChromaAnimationAPI.duplicateFramesName(baseLayer);
+    int minThreshold = 240; //black
+    int maxThreshold = 240; //rain
+    sChromaAnimationAPI.fillThresholdColorsMinMaxAllFramesRGBName(baseLayer, minThreshold, 0, 0, 0, maxThreshold, 0, 127, 255);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect39Keypad()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = 20;
+    // Start with blank frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesName(baseLayer, frameCount, 0.033f, 0);
+    // Fill all frames with black and white static
+    sChromaAnimationAPI.fillRandomColorsBlackAndWhiteAllFramesName(baseLayer);
+    // slow down the random frames so it can be seen
+    sChromaAnimationAPI.duplicateFramesName(baseLayer);
+    int minThreshold = 240; //black
+    int maxThreshold = 240; //rain
+    sChromaAnimationAPI.fillThresholdColorsMinMaxAllFramesRGBName(baseLayer, minThreshold, 0, 0, 0, maxThreshold, 0, 127, 255);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect40()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
+    String idleAnimation = getAnimationPath()+"BlackAndWhiteRainbow_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.closeAnimationName(idleAnimation);
+    // Set idle animation
+    sChromaAnimationAPI.setIdleAnimationName(idleAnimation);
+    // Enable idle animation
+    sChromaAnimationAPI.useIdleAnimation(Device.Keyboard.getValue(), true);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // Transition from green to red and then stop
+    int frameCount = 30;
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
+    int color1 = sChromaAnimationAPI.getRGB(0, 255, 0);
+    int color2 = sChromaAnimationAPI.getRGB(255, 0, 0);
+    sChromaAnimationAPI.multiplyColorLerpAllFramesName(baseLayer, color1, color2);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    }
+    public static void showEffect40ChromaLink()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_ChromaLink.chroma";
+    String idleAnimation = getAnimationPath()+"BlackAndWhiteRainbow_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.closeAnimationName(idleAnimation);
+    // Set idle animation
+    sChromaAnimationAPI.setIdleAnimationName(idleAnimation);
+    // Enable idle animation
+    sChromaAnimationAPI.useIdleAnimation(Device.ChromaLink.getValue(), true);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // Transition from green to red and then stop
+    int frameCount = 30;
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
+    int color1 = sChromaAnimationAPI.getRGB(0, 255, 0);
+    int color2 = sChromaAnimationAPI.getRGB(255, 0, 0);
+    sChromaAnimationAPI.multiplyColorLerpAllFramesName(baseLayer, color1, color2);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    }
+    public static void showEffect40Headset()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Headset.chroma";
+    String idleAnimation = getAnimationPath()+"BlackAndWhiteRainbow_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.closeAnimationName(idleAnimation);
+    // Set idle animation
+    sChromaAnimationAPI.setIdleAnimationName(idleAnimation);
+    // Enable idle animation
+    sChromaAnimationAPI.useIdleAnimation(Device.Headset.getValue(), true);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // Transition from green to red and then stop
+    int frameCount = 30;
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
+    int color1 = sChromaAnimationAPI.getRGB(0, 255, 0);
+    int color2 = sChromaAnimationAPI.getRGB(255, 0, 0);
+    sChromaAnimationAPI.multiplyColorLerpAllFramesName(baseLayer, color1, color2);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    }
+    public static void showEffect40Mousepad()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Mousepad.chroma";
+    String idleAnimation = getAnimationPath()+"BlackAndWhiteRainbow_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.closeAnimationName(idleAnimation);
+    // Set idle animation
+    sChromaAnimationAPI.setIdleAnimationName(idleAnimation);
+    // Enable idle animation
+    sChromaAnimationAPI.useIdleAnimation(Device.Mousepad.getValue(), true);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // Transition from green to red and then stop
+    int frameCount = 30;
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
+    int color1 = sChromaAnimationAPI.getRGB(0, 255, 0);
+    int color2 = sChromaAnimationAPI.getRGB(255, 0, 0);
+    sChromaAnimationAPI.multiplyColorLerpAllFramesName(baseLayer, color1, color2);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    }
+    public static void showEffect40Mouse()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Mouse.chroma";
+    String idleAnimation = getAnimationPath()+"BlackAndWhiteRainbow_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.closeAnimationName(idleAnimation);
+    // Set idle animation
+    sChromaAnimationAPI.setIdleAnimationName(idleAnimation);
+    // Enable idle animation
+    sChromaAnimationAPI.useIdleAnimation(Device.Mouse.getValue(), true);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // Transition from green to red and then stop
+    int frameCount = 30;
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
+    int color1 = sChromaAnimationAPI.getRGB(0, 255, 0);
+    int color2 = sChromaAnimationAPI.getRGB(255, 0, 0);
+    sChromaAnimationAPI.multiplyColorLerpAllFramesName(baseLayer, color1, color2);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    }
+    public static void showEffect40Keypad()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Keypad.chroma";
+    String idleAnimation = getAnimationPath()+"BlackAndWhiteRainbow_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.closeAnimationName(idleAnimation);
+    // Set idle animation
+    sChromaAnimationAPI.setIdleAnimationName(idleAnimation);
+    // Enable idle animation
+    sChromaAnimationAPI.useIdleAnimation(Device.Mouse.getValue(), true);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // Transition from green to red and then stop
+    int frameCount = 30;
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
+    int color1 = sChromaAnimationAPI.getRGB(0, 255, 0);
+    int color2 = sChromaAnimationAPI.getRGB(255, 0, 0);
+    sChromaAnimationAPI.multiplyColorLerpAllFramesName(baseLayer, color1, color2);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, false);
+    }
+    public static void showEffect41()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 50;
+    // set all frames to white, with all frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 0, 64);
+    int maxRow = sChromaAnimationAPI.getMaxRow(Device2D.Keyboard.getValue());
+    int maxColumn = sChromaAnimationAPI.getMaxColumn(Device2D.Keyboard.getValue());
+    int startColumn = (int)Math.floor(Math.random() * maxColumn) % 22;
+    int startRow = (int)Math.floor(Math.random() * maxRow) % 6;
+    int color = sChromaAnimationAPI.getRGB(0, 255, 0);
+    float radius = 0;
+    float speed = 25 / (float)frameCount;
+    int lineWidth = 2;
+    for (int frameIndex = 0; frameIndex < frameCount; ++frameIndex) {
+    float stroke = radius;
+    for (int t = 0; t < lineWidth; ++t) {
+    for (int i = 0; i < 360; ++i) {
+    float angle = (float)(i * Math.PI / 180.0f);
+    int r = (int) Math.floor(startRow + stroke * Math.sin(angle));
+    int c = (int) Math.floor(startColumn + stroke * Math.cos(angle));
+    if (r >= 0 && r < maxRow &&
+    c >= 0 && c < maxColumn) {
+    int key = (r << 8) | c;
+    sChromaAnimationAPI.setKeyColorName(baseLayer, frameIndex, key, color);
+    }
+    }
+    stroke += speed;
+    }
+    radius += speed;
+    }
+    // play at top speed
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect41ChromaLink()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 50;
+    // solid color
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 255, 64);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect41Headset()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 50;
+    // solid color
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 255, 64);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect41Mousepad()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 50;
+    // solid color
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 255, 64);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect41Mouse()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 50;
+    // solid color
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 255, 64);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect41Keypad()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 50;
+    // solid color
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 255, 64);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect42()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 1;
+    // set all frames to white, with all frames set to 30FPS
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 0, 64);
+    int maxRow = sChromaAnimationAPI.getMaxRow(Device2D.Keyboard.getValue());
+    int maxColumn = sChromaAnimationAPI.getMaxColumn(Device2D.Keyboard.getValue());
+    // pick first key
+    int pointAColumn = (int) (Math.floor(Math.random() * maxColumn) % 22);
+    int pointARow = (int) (Math.floor(Math.random() * maxRow) % 6);
+    // pick a different second key
+    int pointBColumn;
+    int pointBRow;
+    do {
+    pointBColumn = (int) (Math.floor(Math.random() * maxColumn) % 22);
+    pointBRow = (int) (Math.floor(Math.random() * maxRow) % 6);
+    } while (pointAColumn == pointBColumn && pointARow == pointBRow);
+    int color = sChromaAnimationAPI.getRGB(0, 255, 0);
+    int frameIndex = 0;
+    for (float i = 0.0f; i <= 1.0f; i += 0.04f) { // 1.0/22.0
+    int r = (int) Math.floor(sChromaAnimationAPI.lerp(pointARow, pointBRow, i));
+    int c = (int) Math.floor(sChromaAnimationAPI.lerp(pointAColumn, pointBColumn, i));
+    if (r >= 0 && r < maxRow &&
+    c >= 0 && c < maxColumn) {
+    int key = (r << 8) | c;
+    sChromaAnimationAPI.setKeyColorName(baseLayer, frameIndex, key, color);
+    }
+    }
+    // play at top speed
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect42ChromaLink()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_ChromaLink.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 50;
+    // solid color
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 255, 64);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect42Headset()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Headset.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 50;
+    // solid color
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 255, 64);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect42Mousepad()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Mousepad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 50;
+    // solid color
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 255, 64);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect42Mouse()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Mouse.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 50;
+    // solid color
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 255, 64);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect42Keypad()
+    {
+    // start with a blank animation
+    String baseLayer = getAnimationPath()+"Blank_Keypad.chroma";
+    // close the blank animation if it's already loaded, discarding any changes
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    // the length of the animation
+    int frameCount = 50;
+    // solid color
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 255, 64);
+    // play the animation on the dynamic canvas
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect43()
+    {
+    String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Keyboard.chroma";
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.reduceFramesName(baseLayer, 2);
+    sChromaAnimationAPI.reduceFramesName(baseLayer, 2);
+    int color1 = sChromaAnimationAPI.getRGB(64, 64, 0);
+    int color2 = sChromaAnimationAPI.getRGB(64, 0, 64);
+    sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+    int keys[] = {
+    		JChromaSDK.Keyboard.RZKEY.RZKEY_W.getValue(),
+    		JChromaSDK.Keyboard.RZKEY.RZKEY_A.getValue(),
+    		JChromaSDK.Keyboard.RZKEY.RZKEY_S.getValue(),
+    		JChromaSDK.Keyboard.RZKEY.RZKEY_D.getValue(),
+    		JChromaSDK.Keyboard.RZKEY.RZKEY_P.getValue(),
+    		JChromaSDK.Keyboard.RZKEY.RZKEY_M.getValue(),
+    		JChromaSDK.Keyboard.RZKEY.RZKEY_F1.getValue(),
+    };
+    int color = sChromaAnimationAPI.getRGB(0, 255, 0);
+    sChromaAnimationAPI.setKeysColorAllFramesName(baseLayer, keys, keys.length,  color);
+    sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
+    sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect43ChromaLink()
+    {
+    String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_ChromaLink.chroma";
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.reduceFramesName(baseLayer, 2);
+    sChromaAnimationAPI.reduceFramesName(baseLayer, 2);
+    int color1 = sChromaAnimationAPI.getRGB(64, 64, 0);
+    int color2 = sChromaAnimationAPI.getRGB(64, 0, 64);
+    sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect43Headset()
+    {
+    String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Headset.chroma";
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.reduceFramesName(baseLayer, 2);
+    sChromaAnimationAPI.reduceFramesName(baseLayer, 2);
+    int color1 = sChromaAnimationAPI.getRGB(64, 64, 0);
+    int color2 = sChromaAnimationAPI.getRGB(64, 0, 64);
+    sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect43Mousepad()
+    {
+    String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Mousepad.chroma";
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.reduceFramesName(baseLayer, 2);
+    sChromaAnimationAPI.reduceFramesName(baseLayer, 2);
+    int color1 = sChromaAnimationAPI.getRGB(64, 64, 0);
+    int color2 = sChromaAnimationAPI.getRGB(64, 0, 64);
+    sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect43Mouse()
+    {
+    String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Mouse.chroma";
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.reduceFramesName(baseLayer, 2);
+    sChromaAnimationAPI.reduceFramesName(baseLayer, 2);
+    int color1 = sChromaAnimationAPI.getRGB(64, 64, 0);
+    int color2 = sChromaAnimationAPI.getRGB(64, 0, 64);
+    sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect43Keypad()
+    {
+    String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Keypad.chroma";
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.reduceFramesName(baseLayer, 2);
+    sChromaAnimationAPI.reduceFramesName(baseLayer, 2);
+    int color1 = sChromaAnimationAPI.getRGB(64, 64, 0);
+    int color2 = sChromaAnimationAPI.getRGB(64, 0, 64);
+    sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect44()
+    {
+    String baseLayer = getAnimationPath()+"Spiral_Keyboard.chroma";
+    String layer2 = "animations/Rainbow_Keyboard.chroma";
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.closeAnimationName(layer2);
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.getAnimation(layer2);
+    int color1 = sChromaAnimationAPI.getRGB(32, 32, 32);
+    int color2 = sChromaAnimationAPI.getRGB(64, 64, 64);
+    sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+    int keys[] = {
+    		JChromaSDK.Keyboard.RZKEY.RZKEY_W.getValue(),
+    		JChromaSDK.Keyboard.RZKEY.RZKEY_A.getValue(),
+    		JChromaSDK.Keyboard.RZKEY.RZKEY_S.getValue(),
+    		JChromaSDK.Keyboard.RZKEY.RZKEY_D.getValue(),
+    		JChromaSDK.Keyboard.RZKEY.RZKEY_P.getValue(),
+    		JChromaSDK.Keyboard.RZKEY.RZKEY_M.getValue(),
+    		JChromaSDK.Keyboard.RZKEY.RZKEY_F1.getValue(),
+    };
+    sChromaAnimationAPI.copyKeysColorAllFramesName(layer2, baseLayer, keys, keys.length);
+    sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
+    sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect44ChromaLink()
+    {
+    String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_ChromaLink.chroma";
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.reduceFramesName(baseLayer, 2);
+    sChromaAnimationAPI.reduceFramesName(baseLayer, 2);
+    int color1 = sChromaAnimationAPI.getRGB(32, 32, 32);
+    int color2 = sChromaAnimationAPI.getRGB(64, 64, 64);
+    sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect44Headset()
+    {
+    String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Headset.chroma";
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.reduceFramesName(baseLayer, 2);
+    sChromaAnimationAPI.reduceFramesName(baseLayer, 2);
+    int color1 = sChromaAnimationAPI.getRGB(32, 32, 32);
+    int color2 = sChromaAnimationAPI.getRGB(64, 64, 64);
+    sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect44Mousepad()
+    {
+    String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Mousepad.chroma";
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.reduceFramesName(baseLayer, 2);
+    sChromaAnimationAPI.reduceFramesName(baseLayer, 2);
+    int color1 = sChromaAnimationAPI.getRGB(32, 32, 32);
+    int color2 = sChromaAnimationAPI.getRGB(64, 64, 64);
+    sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect44Mouse()
+    {
+    String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Mouse.chroma";
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.reduceFramesName(baseLayer, 2);
+    sChromaAnimationAPI.reduceFramesName(baseLayer, 2);
+    int color1 = sChromaAnimationAPI.getRGB(32, 32, 32);
+    int color2 = sChromaAnimationAPI.getRGB(64, 64, 64);
+    sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect44Keypad()
+    {
+    String baseLayer = getAnimationPath()+"BlackAndWhiteRainbow_Keypad.chroma";
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    sChromaAnimationAPI.reduceFramesName(baseLayer, 2);
+    sChromaAnimationAPI.reduceFramesName(baseLayer, 2);
+    int color1 = sChromaAnimationAPI.getRGB(32, 32, 32);
+    int color2 = sChromaAnimationAPI.getRGB(64, 64, 64);
+    sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect45()
+    {
+    String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = 120;
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 64, 64, 64);
+    {
+	    int keys[] = {
+		JChromaSDK.Keyboard.RZKEY.RZKEY_W.getValue(),
+		JChromaSDK.Keyboard.RZKEY.RZKEY_A.getValue(),
+		JChromaSDK.Keyboard.RZKEY.RZKEY_S.getValue(),
+		JChromaSDK.Keyboard.RZKEY.RZKEY_D.getValue(),
+	    };
+	    sChromaAnimationAPI.setKeysColorAllFramesRGBName(baseLayer,  keys, keys.length,  255,  255,  0);
+    }
+    int keys[] = {
+	JChromaSDK.Keyboard.RZKEY.RZKEY_F1.getValue(),
+	JChromaSDK.Keyboard.RZKEY.RZKEY_F2.getValue(),
+	JChromaSDK.Keyboard.RZKEY.RZKEY_F3.getValue(),
+	JChromaSDK.Keyboard.RZKEY.RZKEY_F4.getValue(),
+	JChromaSDK.Keyboard.RZKEY.RZKEY_F5.getValue(),
+	JChromaSDK.Keyboard.RZKEY.RZKEY_F6.getValue(),
+    };
+    float t = 0;
+    float speed = 0.05f;
+    for (int frameId = 0; frameId < frameCount; ++frameId) {
+    t += speed;
+    float hp = (float) Math.abs(Math.cos(Math.PI / 2.0f + t));
+    for (int i = 0; i < keys.length; ++i) {
+    int ratio = (i + 1) / keys.length;
+    int color = sChromaAnimationAPI.getRGB(0, (int)(255 * (1 - hp)), 0);
+    if ((i + 1) / (keys.length + 1) < hp) {
+    color = sChromaAnimationAPI.getRGB(0, 255, 0);
+    } else {
+    color = sChromaAnimationAPI.getRGB(0, 100, 0);
+    }
+    int key = keys[i];
+    sChromaAnimationAPI.setKeyColorName(baseLayer, frameId, key, color);
+    }
+    }
+    sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
+    sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect45ChromaLink()
+    {
+    String baseLayer = getAnimationPath()+"Blank_ChromaLink.chroma";
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = 50;
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
+    sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
+    sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
+    int color1 = sChromaAnimationAPI.getRGB(0, 64, 0);
+    int color2 = sChromaAnimationAPI.getRGB(0, 255, 0);
+    sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect45Headset()
+    {
+    String baseLayer = getAnimationPath()+"Blank_Headset.chroma";
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = 50;
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
+    sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
+    sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
+    int color1 = sChromaAnimationAPI.getRGB(0, 64, 0);
+    int color2 = sChromaAnimationAPI.getRGB(0, 255, 0);
+    sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect45Mousepad()
+    {
+    String baseLayer = getAnimationPath()+"Blank_Mousepad.chroma";
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = 50;
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
+    sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
+    sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
+    int color1 = sChromaAnimationAPI.getRGB(0, 64, 0);
+    int color2 = sChromaAnimationAPI.getRGB(0, 255, 0);
+    sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect45Mouse()
+    {
+    String baseLayer = getAnimationPath()+"Blank_Mouse.chroma";
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = 50;
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
+    sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
+    sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
+    int color1 = sChromaAnimationAPI.getRGB(0, 64, 0);
+    int color2 = sChromaAnimationAPI.getRGB(0, 255, 0);
+    sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect45Keypad()
+    {
+    String baseLayer = getAnimationPath()+"Blank_Keypad.chroma";
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = 50;
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
+    sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
+    sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
+    int color1 = sChromaAnimationAPI.getRGB(0, 64, 0);
+    int color2 = sChromaAnimationAPI.getRGB(0, 255, 0);
+    sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect46()
+    {
+    String baseLayer = getAnimationPath()+"Blank_Keyboard.chroma";
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = 120;
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 64, 64, 64);
+
+    {
+	    int keys[] = {
+			JChromaSDK.Keyboard.RZKEY.RZKEY_W.getValue(),
+			JChromaSDK.Keyboard.RZKEY.RZKEY_A.getValue(),
+			JChromaSDK.Keyboard.RZKEY.RZKEY_S.getValue(),
+			JChromaSDK.Keyboard.RZKEY.RZKEY_D.getValue(),
+	    };
+	    sChromaAnimationAPI.setKeysColorAllFramesRGBName(baseLayer,  keys, keys.length,  255,  0,  0);
+    }
+
+    int[] keys = {
+	    JChromaSDK.Keyboard.RZKEY.RZKEY_F7.getValue(),
+	    JChromaSDK.Keyboard.RZKEY.RZKEY_F8.getValue(),
+	    JChromaSDK.Keyboard.RZKEY.RZKEY_F9.getValue(),
+	    JChromaSDK.Keyboard.RZKEY.RZKEY_F10.getValue(),
+	    JChromaSDK.Keyboard.RZKEY.RZKEY_F11.getValue(),
+	    JChromaSDK.Keyboard.RZKEY.RZKEY_F12.getValue()
+    };
+    float t = 0;
+    float speed = 0.05f;
+    for (int frameId = 0; frameId < frameCount; ++frameId) {
+    t += speed;
+    float hp = (float) Math.abs(Math.cos(Math.PI / 2.0f + t));
+    for (int i = 0; i < keys.length; ++i) {
+    int ratio = (i + 1) / keys.length;
+    int color = sChromaAnimationAPI.getRGB((int)(255 * (1 - hp)), (int)(255 * (1 - hp)), 0);
+    if ((i + 1) / (keys.length + 1) < hp) {
+    color = sChromaAnimationAPI.getRGB(255, 255, 0);
+    } else {
+    color = sChromaAnimationAPI.getRGB(100, 100, 0);
+    }
+    int key = keys[i];
+    sChromaAnimationAPI.setKeyColorName(baseLayer, frameId, key, color);
+    }
+    }
+    sChromaAnimationAPI.setChromaCustomFlagName(baseLayer, true);
+    sChromaAnimationAPI.setChromaCustomColorAllFramesName(baseLayer);
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect46ChromaLink()
+    {
+    String baseLayer = getAnimationPath()+"Blank_ChromaLink.chroma";
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = 50;
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
+    sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
+    sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
+    int color1 = sChromaAnimationAPI.getRGB(64, 64, 0);
+    int color2 = sChromaAnimationAPI.getRGB(255, 255, 0);
+    sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect46Headset()
+    {
+    String baseLayer = getAnimationPath()+"Blank_Headset.chroma";
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = 50;
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
+    sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
+    sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
+    int color1 = sChromaAnimationAPI.getRGB(64, 64, 0);
+    int color2 = sChromaAnimationAPI.getRGB(255, 255, 0);
+    sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect46Mousepad()
+    {
+    String baseLayer = getAnimationPath()+"Blank_Mousepad.chroma";
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = 50;
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
+    sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
+    sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
+    int color1 = sChromaAnimationAPI.getRGB(64, 64, 0);
+    int color2 = sChromaAnimationAPI.getRGB(255, 255, 0);
+    sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect46Mouse()
+    {
+    String baseLayer = getAnimationPath()+"Blank_Mouse.chroma";
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = 50;
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
+    sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
+    sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
+    int color1 = sChromaAnimationAPI.getRGB(64, 64, 0);
+    int color2 = sChromaAnimationAPI.getRGB(255, 255, 0);
+    sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect46Keypad()
+    {
+    String baseLayer = getAnimationPath()+"Blank_Keypad.chroma";
+    sChromaAnimationAPI.closeAnimationName(baseLayer);
+    sChromaAnimationAPI.getAnimation(baseLayer);
+    int frameCount = 50;
+    sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
+    sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
+    sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
+    int color1 = sChromaAnimationAPI.getRGB(64, 64, 0);
+    int color2 = sChromaAnimationAPI.getRGB(255, 255, 0);
+    sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+    sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+    sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    
+    private static int[] EMBED_Sample_ChromaLink = { 0 };
+    private static int[] EMBED_Sample_Headset = { 0 };
+    private static int[] EMBED_Sample_Keyboard = { 0 };
+    private static int[] EMBED_Sample_Keypad = { 0 };
+    private static int[] EMBED_Sample_Mouse = { 0 };
+    private static int[] EMBED_Sample_Mousepad = { 0 };
+    
+    public static void showEffect47()
+    {
+    	String baseLayer = "Embedded/Sample_Keyboard.chroma";
+        // close the blank animation if it's already loaded, discarding any changes
+    	sChromaAnimationAPI.closeAnimationName(baseLayer);
+        // open the bytes from memory and name it
+    	sChromaAnimationAPI.openAnimationFromMemory(EMBED_Sample_Keyboard, baseLayer);
+        // set animation playback to 30 FPS
+    	sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+        // play the animation on the dynamic canvas
+    	sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect47ChromaLink()
+    {
+    	String baseLayer = "Embedded/Sample_ChromaLink.chroma";
+        // close the blank animation if it's already loaded, discarding any changes
+    	sChromaAnimationAPI.closeAnimationName(baseLayer);
+        // open the bytes from memory and name it
+    	sChromaAnimationAPI.openAnimationFromMemory(EMBED_Sample_ChromaLink, baseLayer);
+        // set animation playback to 30 FPS
+    	sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+        // play the animation on the dynamic canvas
+    	sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect47Headset()
+    {
+    	String baseLayer = "Embedded/Sample_Headset.chroma";
+        // close the blank animation if it's already loaded, discarding any changes
+    	sChromaAnimationAPI.closeAnimationName(baseLayer);
+        // open the bytes from memory and name it
+    	sChromaAnimationAPI.openAnimationFromMemory(EMBED_Sample_Headset, baseLayer);
+        // set animation playback to 30 FPS
+    	sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+        // play the animation on the dynamic canvas
+    	sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect47Mousepad()
+    {
+    	String baseLayer = "Embedded/Sample_Mousepad.chroma";
+        // close the blank animation if it's already loaded, discarding any changes
+    	sChromaAnimationAPI.closeAnimationName(baseLayer);
+        // open the bytes from memory and name it
+    	sChromaAnimationAPI.openAnimationFromMemory(EMBED_Sample_Mousepad, baseLayer);
+        // set animation playback to 30 FPS
+    	sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+        // play the animation on the dynamic canvas
+    	sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect47Mouse()
+    {
+    	String baseLayer = "Embedded/Sample_Mouse.chroma";
+        // close the blank animation if it's already loaded, discarding any changes
+    	sChromaAnimationAPI.closeAnimationName(baseLayer);
+        // open the bytes from memory and name it
+    	sChromaAnimationAPI.openAnimationFromMemory(EMBED_Sample_Mouse, baseLayer);
+        // set animation playback to 30 FPS
+    	sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+        // play the animation on the dynamic canvas
+    	sChromaAnimationAPI.playAnimationName(baseLayer, true);
+    }
+    public static void showEffect47Keypad()
+    {
+        String baseLayer = "Embedded/Sample_Keypad.chroma";
+        // close the blank animation if it's already loaded, discarding any changes
         sChromaAnimationAPI.closeAnimationName(baseLayer);
-        sChromaAnimationAPI.getAnimation(baseLayer);
-        int frameCount = 50;
-        sChromaAnimationAPI.makeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-        sChromaAnimationAPI.fadeStartFramesName(baseLayer, frameCount / 2);
-        sChromaAnimationAPI.fadeEndFramesName(baseLayer, frameCount / 2);
-        int color1 = sChromaAnimationAPI.getRGB(0, 255, 255);
-        int color2 = sChromaAnimationAPI.getRGB(64, 64, 255);
-        sChromaAnimationAPI.multiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+        // open the bytes from memory and name it
+        sChromaAnimationAPI.openAnimationFromMemory(EMBED_Sample_Keypad, baseLayer);
+        // set animation playback to 30 FPS
         sChromaAnimationAPI.overrideFrameDurationName(baseLayer, 0.033f);
+        // play the animation on the dynamic canvas
         sChromaAnimationAPI.playAnimationName(baseLayer, true);
     }
-/*
-case 1:
-ShowEffect1();
-ShowEffect1ChromaLink();
-ShowEffect1Headset();
-ShowEffect1Mousepad();
-ShowEffect1Mouse();
-break;
-case 2:
-ShowEffect2();
-ShowEffect2ChromaLink();
-ShowEffect2Headset();
-ShowEffect2Mousepad();
-ShowEffect2Mouse();
-break;
-case 3:
-ShowEffect3();
-ShowEffect3ChromaLink();
-ShowEffect3Headset();
-ShowEffect3Mousepad();
-ShowEffect3Mouse();
-break;
-case 4:
-ShowEffect4();
-ShowEffect4ChromaLink();
-ShowEffect4Headset();
-ShowEffect4Mousepad();
-ShowEffect4Mouse();
-break;
-case 5:
-ShowEffect5();
-ShowEffect5ChromaLink();
-ShowEffect5Headset();
-ShowEffect5Mousepad();
-ShowEffect5Mouse();
-break;
-case 6:
-ShowEffect6();
-ShowEffect6ChromaLink();
-ShowEffect6Headset();
-ShowEffect6Mousepad();
-ShowEffect6Mouse();
-break;
-case 7:
-ShowEffect7();
-ShowEffect7ChromaLink();
-ShowEffect7Headset();
-ShowEffect7Mousepad();
-ShowEffect7Mouse();
-break;
-case 8:
-ShowEffect8();
-ShowEffect8ChromaLink();
-ShowEffect8Headset();
-ShowEffect8Mousepad();
-ShowEffect8Mouse();
-break;
-case 9:
-ShowEffect9();
-ShowEffect9ChromaLink();
-ShowEffect9Headset();
-ShowEffect9Mousepad();
-ShowEffect9Mouse();
-break;
-case 10:
-ShowEffect10();
-ShowEffect10ChromaLink();
-ShowEffect10Headset();
-ShowEffect10Mousepad();
-ShowEffect10Mouse();
-break;
-case 11:
-ShowEffect11();
-ShowEffect11ChromaLink();
-ShowEffect11Headset();
-ShowEffect11Mousepad();
-ShowEffect11Mouse();
-break;
-case 12:
-ShowEffect12();
-ShowEffect12ChromaLink();
-ShowEffect12Headset();
-ShowEffect12Mousepad();
-ShowEffect12Mouse();
-break;
-case 13:
-ShowEffect13();
-ShowEffect13ChromaLink();
-ShowEffect13Headset();
-ShowEffect13Mousepad();
-ShowEffect13Mouse();
-break;
-case 14:
-ShowEffect14();
-ShowEffect14ChromaLink();
-ShowEffect14Headset();
-ShowEffect14Mousepad();
-ShowEffect14Mouse();
-break;
-case 15:
-ShowEffect15();
-ShowEffect15ChromaLink();
-ShowEffect15Headset();
-ShowEffect15Mousepad();
-ShowEffect15Mouse();
-break;
-*/
 
 }

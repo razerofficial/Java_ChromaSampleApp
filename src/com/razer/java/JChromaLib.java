@@ -316,7 +316,7 @@ interface JChromaLib extends Library {
 	target animation for all frames. Reference the source and target by name.
 	*/
 	/// EXPORT_API void PluginCopyKeysColorAllFramesName(const char* sourceAnimation, const char* targetAnimation, const int* keys, int size);
-	void PluginCopyKeysColorAllFramesName(String sourceAnimation, String targetAnimation, Pointer keys, int size);
+	void PluginCopyKeysColorAllFramesName(String sourceAnimation, String targetAnimation, int[] keys, int size);
 	/*
 	Copy animation color for a set of keys from the source animation to the 
 	target animation for the given frame. Reference the source and target by 
@@ -2066,7 +2066,7 @@ interface JChromaLib extends Library {
 	in most of the API methods.
 	*/
 	/// EXPORT_API int PluginOpenAnimationFromMemory(const byte* data, const char* name);
-	int PluginOpenAnimationFromMemory(Pointer data, String name);
+	int PluginOpenAnimationFromMemory(int[] data, String name);
 	/*
 	Opens a `Chroma` animation file with the `.chroma` extension. Returns zero 
 	upon success. Returns -1 if there was a failure.
@@ -2503,7 +2503,7 @@ interface JChromaLib extends Library {
 	is referenced by name.
 	*/
 	/// EXPORT_API void PluginSetKeysColorAllFramesName(const char* path, const int* rzkeys, int keyCount, int color);
-	void PluginSetKeysColorAllFramesName(String path, Pointer rzkeys, int keyCount, int color);
+	void PluginSetKeysColorAllFramesName(String path, int[] rzkeys, int keyCount, int color);
 	/*
 	Set an array of animation keys to a static color for all frames. Animation 
 	is referenced by id.
@@ -2515,7 +2515,7 @@ interface JChromaLib extends Library {
 	is referenced by name.
 	*/
 	/// EXPORT_API void PluginSetKeysColorAllFramesRGBName(const char* path, const int* rzkeys, int keyCount, int red, int green, int blue);
-	void PluginSetKeysColorAllFramesRGBName(String path, Pointer rzkeys, int keyCount, int red, int green, int blue);
+	void PluginSetKeysColorAllFramesRGBName(String path, int[] rzkeys, int keyCount, int red, int green, int blue);
 	/*
 	Set an array of animation keys to a static color for the given frame.
 	*/
