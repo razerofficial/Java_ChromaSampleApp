@@ -2066,7 +2066,7 @@ interface JChromaLib extends Library {
 	in most of the API methods.
 	*/
 	/// EXPORT_API int PluginOpenAnimationFromMemory(const byte* data, const char* name);
-	int PluginOpenAnimationFromMemory(int[] data, String name);
+	int PluginOpenAnimationFromMemory(byte[] data, String name);
 	/*
 	Opens a `Chroma` animation file with the `.chroma` extension. Returns zero 
 	upon success. Returns -1 if there was a failure.
