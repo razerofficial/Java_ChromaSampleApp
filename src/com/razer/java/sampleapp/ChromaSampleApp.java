@@ -116,7 +116,8 @@ public class ChromaSampleApp extends ChromaEffects {
 		System.out.println();
 		
 		logMessage("Enter the effect number and press `ENTER` to play the effect.");
-		logMessage("Just press `ENTER` to repeat the effect.");		
+		logMessage("Press `p` and press `ENTER` for the previous effect.");
+		logMessage("Press `n` and press `ENTER` for the next effect.");
 		logMessage("Press `q` and press `ENTER` to quit\r\n");
 	}
 	
