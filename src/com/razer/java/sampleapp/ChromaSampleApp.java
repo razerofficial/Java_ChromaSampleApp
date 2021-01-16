@@ -34,7 +34,7 @@ public class ChromaSampleApp extends ChromaEffects {
 	    appInfo.setTitle("Java Chroma Sample App");
 	    appInfo.setDescription("A sample application using Razer Chroma SDK");
 	    appInfo.setAuthorName("Razer");
-	    appInfo.setAuthorContact("https://github.com/tgraupmann/Java_ChromaSampleApp");
+	    appInfo.setAuthorContact("https://github.com/RazerOfficial/Java_ChromaSampleApp");
 
 	    //appInfo.SupportedDevice = 
 	    //    0x01 | // Keyboards
