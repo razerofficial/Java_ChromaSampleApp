@@ -3308,13 +3308,9 @@ public class JChromaSDK {
 	in most of the API methods.
 	*/
 	/// EXPORT_API int PluginOpenAnimationFromMemory(const byte* data, const char* name);
-	public int openAnimationFromMemory(int[] data, String name)
+	public int openAnimationFromMemory(byte[] data, String name)
 	{
-		byte[] copy = new byte[data.length];
-		for (int i = 0; i < data.length; ++i) {
-			copy[i] = (byte) data[i];
-		}
-		return wrapper.PluginOpenAnimationFromMemory(copy, name);
+		return wrapper.PluginOpenAnimationFromMemory(data, name);
 	}
 	/*
 	Opens a `Chroma` animation file with the `.chroma` extension. Returns zero 
