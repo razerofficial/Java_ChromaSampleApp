@@ -20,6 +20,10 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect1() {
+
+		// Trigger haptic effect
+		sChromaAnimationAPI.coreSetEventName("Effect1");
+		
 		// start with a blank animation
 		String baseLayer = "animations/Sprite1_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -92,6 +96,10 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect2() {
+
+		// Trigger haptic effect
+		sChromaAnimationAPI.coreSetEventName("Effect2");
+				
 		// start with a blank animation
 		String baseLayer = "animations/Trails_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -164,6 +172,10 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect3() {
+
+		// Trigger haptic effect
+		sChromaAnimationAPI.coreSetEventName("Effect3");
+				
 		// start with a blank animation
 		String baseLayer = "animations/Trails_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -268,6 +280,10 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect4() {
+
+		// Trigger haptic effect
+		sChromaAnimationAPI.coreSetEventName("Effect4");
+
 		// start with a blank animation
 		String baseLayer = "animations/ParticlesOut_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -340,6 +356,10 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect5() {
+
+		// Trigger haptic effect
+		sChromaAnimationAPI.coreSetEventName("Effect5");
+
 		// start with a blank animation
 		String baseLayer = "animations/ParticlesOut_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -424,6 +444,10 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect6() {
+
+		// Trigger haptic effect
+		sChromaAnimationAPI.coreSetEventName("Effect6");
+
 		// start with a blank animation
 		String baseLayer = getAnimationPath() + "Blank_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -532,6 +556,10 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect7() {
+
+		// Trigger haptic effect
+		sChromaAnimationAPI.coreSetEventName("Effect7");
+
 		// start with a blank animation
 		String baseLayer = getAnimationPath() + "Blank_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -640,6 +668,10 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect8() {
+
+		// Trigger haptic effect
+		sChromaAnimationAPI.coreSetEventName("Effect8");
+
 		// start with a blank animation
 		String baseLayer = getAnimationPath() + "Blank_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -760,6 +792,10 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect9() {
+
+		// Trigger haptic effect
+		sChromaAnimationAPI.coreSetEventName("Effect9");
+
 		// start with a blank animation
 		String baseLayer = getAnimationPath() + "Blank_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -916,6 +952,10 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect10() {
+
+		// Trigger haptic effect
+		sChromaAnimationAPI.coreSetEventName("Effect10");
+
 		// start with a blank animation
 		String baseLayer = "animations/Particles2_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -988,6 +1028,10 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect11() {
+
+		// Trigger haptic effect
+		sChromaAnimationAPI.coreSetEventName("Effect11");
+
 		// start with a blank animation
 		String baseLayer = "animations/Particles2_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -1072,6 +1116,10 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect12() {
+
+		// Trigger haptic effect
+		sChromaAnimationAPI.coreSetEventName("Effect12");
+
 		// start with a blank animation
 		String baseLayer = getAnimationPath() + "BlackAndWhiteRainbow_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -1144,6 +1192,10 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect13() {
+
+		// Trigger haptic effect
+		sChromaAnimationAPI.coreSetEventName("Effect13");
+
 		// start with a blank animation
 		String baseLayer = getAnimationPath() + "BlackAndWhiteRainbow_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -1252,6 +1304,10 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect14() {
+
+		// Trigger haptic effect
+		sChromaAnimationAPI.coreSetEventName("Effect14");
+
 		// start with a blank animation
 		String baseLayer = getAnimationPath() + "BlackAndWhiteRainbow_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -1330,6 +1386,10 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect15() {
+
+		// Trigger haptic effect
+		sChromaAnimationAPI.coreSetEventName("Effect15");
+
 		// start with a blank animation
 		String baseLayer = getAnimationPath() + "BlackAndWhiteRainbow_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -1486,6 +1546,10 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect16() {
+
+		// Trigger haptic effect
+		sChromaAnimationAPI.coreSetEventName("Effect16");
+
 		// start with a blank animation
 		String baseLayer = "animations/Trails_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -1558,6 +1622,10 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect17() {
+
+		// Trigger haptic effect
+		sChromaAnimationAPI.coreSetEventName("Effect17");
+
 		// start with a blank animation
 		String baseLayer = "animations/Trails_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -1672,6 +1740,10 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect18() {
+
+		// Trigger haptic effect
+		sChromaAnimationAPI.coreSetEventName("Effect18");
+
 		// start with a blank animation
 		String baseLayer = "animations/Trails_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -1756,6 +1828,10 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect19() {
+
+		// Trigger haptic effect
+		sChromaAnimationAPI.coreSetEventName("Effect19");
+
 		// start with a blank animation
 		String baseLayer = "animations/Trails_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -1852,6 +1928,10 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect20() {
+
+		// Trigger haptic effect
+		sChromaAnimationAPI.coreSetEventName("Effect20");
+
 		// start with a blank animation
 		String baseLayer = "animations/Arc3_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -1924,6 +2004,9 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect21() {
+
+		sChromaAnimationAPI.coreSetEventName("Effect21");
+
 		// start with a blank animation
 		String baseLayer = getAnimationPath() + "Blank_Keyboard.chroma";
 		String layer2 = "animations/Arc3_Keyboard.chroma";
@@ -2044,6 +2127,9 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect22() {
+
+		sChromaAnimationAPI.coreSetEventName("Effect22");
+
 		// start with a blank animation
 		String baseLayer = getAnimationPath() + "Blank_Keyboard.chroma";
 		String layer2 = "animations/Arc3_Keyboard.chroma";
@@ -2182,6 +2268,9 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect23() {
+
+		sChromaAnimationAPI.coreSetEventName("Effect23");
+
 		// start with a blank animation
 		String baseLayer = getAnimationPath() + "Blank_Keyboard.chroma";
 		String layer2 = "animations/Arc3_Keyboard.chroma";
@@ -2308,6 +2397,9 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect24() {
+
+		sChromaAnimationAPI.coreSetEventName("Effect24");
+
 		// start with a blank animation
 		String baseLayer = getAnimationPath() + "Blank_Keyboard.chroma";
 		String layer2 = "animations/Arc3_Keyboard.chroma";
@@ -2434,6 +2526,9 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect25() {
+
+		sChromaAnimationAPI.coreSetEventName("Effect25");
+
 		// start with a blank animation
 		String baseLayer = getAnimationPath() + "CircleSmall_Keyboard.chroma";
 		String layer2 = "animations/Rainbow_Keyboard.chroma";
@@ -2523,6 +2618,9 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect26() {
+
+		sChromaAnimationAPI.coreSetEventName("Effect26");
+
 		// start with a blank animation
 		String baseLayer = "animations/Movement_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -2595,6 +2693,9 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect27() {
+
+		sChromaAnimationAPI.coreSetEventName("Effect27");
+
 		// start with a blank animation
 		String baseLayer = "animations/Movement_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -2679,6 +2780,9 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect28() {
+
+		sChromaAnimationAPI.coreSetEventName("Effect28");
+
 		// start with a blank animation
 		String baseLayer = "animations/Movement_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -2775,6 +2879,9 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect29() {
+
+		sChromaAnimationAPI.coreSetEventName("Effect29");
+
 		// start with a blank animation
 		String baseLayer = "animations/Movement_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -2871,6 +2978,9 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect30() {
+
+		sChromaAnimationAPI.coreSetEventName("Effect30");
+
 		// start with a blank animation
 		String baseLayer = "animations/Movement_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -2967,6 +3077,9 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect31() {
+
+		sChromaAnimationAPI.coreSetEventName("Effect31");
+
 		// start with a blank animation
 		String baseLayer = "animations/Movement_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -3075,6 +3188,9 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect32() {
+
+		sChromaAnimationAPI.coreSetEventName("Effect32");
+
 		// start with a blank animation
 		String baseLayer = "animations/Movement_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -3171,6 +3287,9 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect33() {
+
+		sChromaAnimationAPI.coreSetEventName("Effect33");
+
 		// start with a blank animation
 		String baseLayer = "animations/Movement_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -3267,6 +3386,9 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect34() {
+
+		sChromaAnimationAPI.coreSetEventName("Effect34");
+
 		// start with a blank animation
 		String baseLayer = "animations/Movement_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -3363,6 +3485,9 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect35() {
+
+		sChromaAnimationAPI.coreSetEventName("Effect35");
+
 		// start with a blank animation
 		String baseLayer = "animations/Movement_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -3471,6 +3596,9 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect36() {
+
+		sChromaAnimationAPI.coreSetEventName("Effect36");
+
 		// start with a blank animation
 		String baseLayer = getAnimationPath() + "CircleSmall_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -3577,6 +3705,9 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect37() {
+
+		sChromaAnimationAPI.coreSetEventName("Effect37");
+
 		// start with a blank animation
 		String baseLayer = getAnimationPath() + "Blank_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -3691,6 +3822,9 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect38() {
+
+		sChromaAnimationAPI.coreSetEventName("Effect38");
+
 		// start with a blank animation
 		String baseLayer = getAnimationPath() + "Blank_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -3829,6 +3963,9 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect39() {
+
+		sChromaAnimationAPI.coreSetEventName("Effect39");
+
 		// start with a blank animation
 		String baseLayer = getAnimationPath() + "Blank_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -3967,6 +4104,9 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect40() {
+
+		sChromaAnimationAPI.coreSetEventName("Effect40");
+
 		// start with a blank animation
 		String baseLayer = getAnimationPath() + "Blank_Keyboard.chroma";
 		String idleAnimation = getAnimationPath() + "BlackAndWhiteRainbow_Keyboard.chroma";
@@ -4111,6 +4251,9 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect41() {
+
+		sChromaAnimationAPI.coreSetEventName("Effect41");
+
 		// start with a blank animation
 		String baseLayer = getAnimationPath() + "Blank_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -4233,6 +4376,9 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect42() {
+
+		sChromaAnimationAPI.coreSetEventName("Effect42");
+
 		// start with a blank animation
 		String baseLayer = getAnimationPath() + "Blank_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
@@ -4353,6 +4499,9 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect43() {
+
+		sChromaAnimationAPI.coreSetEventName("Effect43");
+
 		String baseLayer = getAnimationPath() + "BlackAndWhiteRainbow_Keyboard.chroma";
 		sChromaAnimationAPI.closeAnimationName(baseLayer);
 		sChromaAnimationAPI.getAnimation(baseLayer);
@@ -4439,6 +4588,9 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect44() {
+
+		sChromaAnimationAPI.coreSetEventName("Effect44");
+
 		String baseLayer = getAnimationPath() + "Spiral_Keyboard.chroma";
 		String layer2 = "animations/Rainbow_Keyboard.chroma";
 		sChromaAnimationAPI.closeAnimationName(baseLayer);
@@ -4525,6 +4677,9 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect45() {
+
+		sChromaAnimationAPI.coreSetEventName("Effect45");
+
 		String baseLayer = getAnimationPath() + "Blank_Keyboard.chroma";
 		sChromaAnimationAPI.closeAnimationName(baseLayer);
 		sChromaAnimationAPI.getAnimation(baseLayer);
@@ -4636,6 +4791,9 @@ public class ChromaEffects {
 	}
 
 	public static void showEffect46() {
+
+		sChromaAnimationAPI.coreSetEventName("Effect46");
+
 		String baseLayer = getAnimationPath() + "Blank_Keyboard.chroma";
 		sChromaAnimationAPI.closeAnimationName(baseLayer);
 		sChromaAnimationAPI.getAnimation(baseLayer);
@@ -5892,6 +6050,9 @@ public class ChromaEffects {
 	
 
 	public static void showEffect47() {
+
+		sChromaAnimationAPI.coreSetEventName("Effect47");
+
 		String baseLayer = "Embedded/Sample_Keyboard.chroma";
 		// close the blank animation if it's already loaded, discarding any changes
 		sChromaAnimationAPI.closeAnimationName(baseLayer);

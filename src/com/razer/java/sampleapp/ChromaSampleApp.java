@@ -50,6 +50,9 @@ public class ChromaSampleApp extends ChromaEffects {
 		if (result == 0) {
 			sChromaInitialized = true;
 			logMessage("Initialized ChromaSDK!");
+			
+			// Manually set event names
+			sChromaAnimationAPI.useForwardChromaEvents(false);
 		} else {
 			logError("Failed to initialize ChromaSDK! error="+result);
 			sChromaInitialized = false;
@@ -118,6 +121,7 @@ public class ChromaSampleApp extends ChromaEffects {
 		logMessage("Enter the effect number and press `ENTER` to play the effect.");
 		logMessage("Press `p` and press `ENTER` for the previous effect.");
 		logMessage("Press `n` and press `ENTER` for the next effect.");
+		logMessage("Press `s` and press `ENTER` to stop all haptic effects.");
 		logMessage("Press `q` and press `ENTER` to quit\r\n");
 	}
 	
@@ -148,6 +152,11 @@ public class ChromaSampleApp extends ChromaEffects {
 				case "Q":
 				case "q":
 					scanner.close();
+					return;
+				case "S":
+				case "s":
+					// Stop haptic playback
+					sChromaAnimationAPI.coreSetEventName("");
 					return;
 				default:
 					item = Integer.parseInt(input);
