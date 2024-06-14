@@ -187,7 +187,8 @@ public class JChromaSDK {
         Keypad(3),
         Mouse(4),
         Mousepad(5),
-        MAX(6);
+		KeyboardExtended(6),
+        MAX(7);
         
         private final int id;
         Device(int id) { this.id = id; }
@@ -213,7 +214,8 @@ public class JChromaSDK {
         Keyboard(0),
         Keypad(1),
         Mouse(2),
-        MAX(3);
+		KeyboardExtended(3),
+        MAX(4);
         
         private final int id;
         Device2D(int id) { this.id = id; }
