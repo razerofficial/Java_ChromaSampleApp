@@ -2305,7 +2305,7 @@ interface JChromaLib extends Library {
 	upon success. Returns negative one if there was a failure. The animation 
 	id is used in most of the API methods.
 	*/
-	/// EXPORT_API int PluginOpenAnimationFromMemory(const byte* data, const char* name);
+	/// EXPORT_API int PluginOpenAnimationFromMemory(const BYTE* data, const char* name);
 	int PluginOpenAnimationFromMemory(byte[] data, String name);
 	/*
 	Opens a `Chroma` animation file with the `.chroma` extension. Returns zero 

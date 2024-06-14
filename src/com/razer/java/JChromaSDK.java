@@ -3660,7 +3660,7 @@ public class JChromaSDK {
 	upon success. Returns negative one if there was a failure. The animation 
 	id is used in most of the API methods.
 	*/
-	/// EXPORT_API int PluginOpenAnimationFromMemory(const byte* data, const char* name);
+	/// EXPORT_API int PluginOpenAnimationFromMemory(const BYTE* data, const char* name);
 	public int openAnimationFromMemory(byte[] data, String name)
 	{
 		return wrapper.PluginOpenAnimationFromMemory(data, name);
