@@ -4976,5 +4976,104 @@ public class ChromaEffects {
 		// play the animation on the dynamic canvas
 		sChromaAnimationAPI.playAnimationName(baseLayer, true);
 	}
+	public static void showEffect48()
+	{
+		// Trigger haptic effect
+		sChromaAnimationAPI.coreSetEventName("Effect48");
+
+		String baseLayer = "Animations/Idle_Keyboard.chroma"; // 8x24
+		sChromaAnimationAPI.closeAnimationName(baseLayer);
+		sChromaAnimationAPI.getAnimation(baseLayer);
+		sChromaAnimationAPI.useIdleAnimation(Device.Keyboard.getValue(), true);
+		sChromaAnimationAPI.setIdleAnimationName(baseLayer);
+
+		String animLayer = "Animations/Effect48_Keyboard.chroma";
+		sChromaAnimationAPI.closeAnimationName(animLayer);
+		sChromaAnimationAPI.getAnimation(animLayer);
+		final int fadeFrames = 20;
+		sChromaAnimationAPI.fadeStartFramesName(animLayer, fadeFrames);
+		sChromaAnimationAPI.fadeEndFramesName(animLayer, fadeFrames);
+		sChromaAnimationAPI.playAnimationName(animLayer, false);
+	}
+	public static void showEffect48ChromaLink()
+	{
+		String baseLayer = "Animations/Idle_ChromaLink.chroma";
+		sChromaAnimationAPI.closeAnimationName(baseLayer);
+		sChromaAnimationAPI.getAnimation(baseLayer);
+		sChromaAnimationAPI.useIdleAnimation(Device.ChromaLink.getValue(), true);
+		sChromaAnimationAPI.setIdleAnimationName(baseLayer);
+
+		String animLayer = "Animations/Effect48_ChromaLink.chroma";
+		sChromaAnimationAPI.closeAnimationName(animLayer);
+		sChromaAnimationAPI.getAnimation(animLayer);
+		final int fadeFrames = 20;
+		sChromaAnimationAPI.fadeStartFramesName(animLayer, fadeFrames);
+		sChromaAnimationAPI.fadeEndFramesName(animLayer, fadeFrames);
+		sChromaAnimationAPI.playAnimationName(animLayer, false);
+	}
+	public static void showEffect48Headset()
+	{
+		String baseLayer = "Animations/Idle_Headset.chroma";
+		sChromaAnimationAPI.closeAnimationName(baseLayer);
+		sChromaAnimationAPI.getAnimation(baseLayer);
+		sChromaAnimationAPI.useIdleAnimation(Device.Headset.getValue(), true);
+		sChromaAnimationAPI.setIdleAnimationName(baseLayer);
+
+		String animLayer = "Animations/Effect48_Headset.chroma";
+		sChromaAnimationAPI.closeAnimationName(animLayer);
+		sChromaAnimationAPI.getAnimation(animLayer);
+		final int fadeFrames = 20;
+		sChromaAnimationAPI.fadeStartFramesName(animLayer, fadeFrames);
+		sChromaAnimationAPI.fadeEndFramesName(animLayer, fadeFrames);
+		sChromaAnimationAPI.playAnimationName(animLayer, false);
+	}
+	public static void showEffect48Mousepad()
+	{
+		String baseLayer = "Animations/Idle_Mousepad.chroma";
+		sChromaAnimationAPI.closeAnimationName(baseLayer);
+		sChromaAnimationAPI.getAnimation(baseLayer);
+		sChromaAnimationAPI.useIdleAnimation(Device.Mousepad.getValue(), true);
+		sChromaAnimationAPI.setIdleAnimationName(baseLayer);
+
+		String animLayer = "Animations/Effect48_Mousepad.chroma";
+		sChromaAnimationAPI.closeAnimationName(animLayer);
+		sChromaAnimationAPI.getAnimation(animLayer);
+		final int fadeFrames = 20;
+		sChromaAnimationAPI.fadeStartFramesName(animLayer, fadeFrames);
+		sChromaAnimationAPI.fadeEndFramesName(animLayer, fadeFrames);
+		sChromaAnimationAPI.playAnimationName(animLayer, false);
+	}
+	public static void showEffect48Mouse()
+	{
+		String baseLayer = "Animations/Idle_Mouse.chroma";
+		sChromaAnimationAPI.closeAnimationName(baseLayer);
+		sChromaAnimationAPI.getAnimation(baseLayer);
+		sChromaAnimationAPI.useIdleAnimation(Device.Mouse.getValue(), true);
+		sChromaAnimationAPI.setIdleAnimationName(baseLayer);
+
+		String animLayer = "Animations/Effect48_Mouse.chroma";
+		sChromaAnimationAPI.closeAnimationName(animLayer);
+		sChromaAnimationAPI.getAnimation(animLayer);
+		final int fadeFrames = 20;
+		sChromaAnimationAPI.fadeStartFramesName(animLayer, fadeFrames);
+		sChromaAnimationAPI.fadeEndFramesName(animLayer, fadeFrames);
+		sChromaAnimationAPI.playAnimationName(animLayer, false);
+	}
+	public static void showEffect48Keypad()
+	{
+		String baseLayer = "Animations/Idle_Keypad.chroma";
+		sChromaAnimationAPI.closeAnimationName(baseLayer);
+		sChromaAnimationAPI.getAnimation(baseLayer);
+		sChromaAnimationAPI.useIdleAnimation(Device.Keypad.getValue(), true);
+		sChromaAnimationAPI.setIdleAnimationName(baseLayer);
+
+		String animLayer = "Animations/Effect48_Keypad.chroma";
+		sChromaAnimationAPI.closeAnimationName(animLayer);
+		sChromaAnimationAPI.getAnimation(animLayer);
+		final int fadeFrames = 20;
+		sChromaAnimationAPI.fadeStartFramesName(animLayer, fadeFrames);
+		sChromaAnimationAPI.fadeEndFramesName(animLayer, fadeFrames);
+		sChromaAnimationAPI.playAnimationName(animLayer, false);
+	}
 
 }

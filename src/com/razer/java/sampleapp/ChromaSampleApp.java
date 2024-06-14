@@ -9,7 +9,7 @@ import com.razer.java.JChromaSDK;
 
 public class ChromaSampleApp extends ChromaEffects {
 	
-	private static int MAX_ITEMS = 47;
+	private static int MAX_ITEMS = 48;
 	
 	private static boolean sWaitForExit = true;
 	private static boolean sChromaInitialized = false;
@@ -555,6 +555,14 @@ public class ChromaSampleApp extends ChromaEffects {
                 showEffect47Keypad();
                 showEffect47Mousepad();
                 showEffect47Mouse();
+                break;
+            case 48:
+                showEffect48();
+                showEffect48ChromaLink();
+                showEffect48Headset();
+                showEffect48Keypad();
+                showEffect48Mousepad();
+                showEffect48Mouse();
                 break;
         }
 	}
