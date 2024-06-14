@@ -43,8 +43,9 @@ public class ChromaSampleApp extends ChromaEffects {
 	    //    0x08 | // Mousepads
 	    //    0x10 | // Keypads
 	    //    0x20   // ChromaLink devices
-	    //    ;
 	    appInfo.supportedDevice = (0x01 | 0x02 | 0x04 | 0x08 | 0x10 | 0x20);
+        //    0x01 | // Utility. (To specifiy this is an utility application)
+        //    0x02   // Game. (To specifiy this is a game);
 	    appInfo.category = 2;
 		int result = sChromaAnimationAPI.initSDK(appInfo);
 		if (result == 0) {
