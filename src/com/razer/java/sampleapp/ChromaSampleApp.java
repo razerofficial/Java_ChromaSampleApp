@@ -158,7 +158,7 @@ public class ChromaSampleApp extends ChromaEffects {
 				case "s":
 					// Stop haptic playback
 					sChromaAnimationAPI.coreSetEventName("");
-					return;
+					break;
 				default:
 					item = Integer.parseInt(input);
 					sSelectedItem = item;
